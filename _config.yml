@@ -1,8 +1,8 @@
-#theme: jekyll-theme-slate
+theme: jekyll-theme-slate
 
 title:
-    SISG Module 17  
-    Computational Pipeline for WGS Data
+    | SISG Module 17  
+    | Computational Pipeline for WGS Data
     
 description: July 27-29, 2022
 
