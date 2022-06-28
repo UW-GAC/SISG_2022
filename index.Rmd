@@ -1,0 +1,139 @@
+---
+title: "SISG 2021 Module 16: Computational Pipeline for WGS Data"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+output: bookdown::gitbook
+documentclass: book
+link-citations: yes
+github-repo: UW-GAC/SISG_2021
+description: "Course materials for SISG 2021 Module 16"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo=TRUE, message=FALSE)
+```
+
+# Introduction
+
+This site contains course materials for SISG Module 16: Computational Pipeline for WGS Data, July 21-23, 2021. The official SISG web page can be found [here](https://si.biostat.washington.edu/suminst/sisg2021/modules/SM2116) (requires login) -- **course evaluations and certificates of completion are available via this page.**
+
+**Lectures**
+
+Slides for lectures are linked below in the schedule. All lectures will be given via Zoom, and recordings of lectures will be posted afterwards.
+
+**Zoom** 
+
+Link for lectures: https://washington.zoom.us/j/92319788832
+
+**Tutorials and Exercises**
+
+To work through the tutorials and exercises, log into [NHLBI BioData Catalyst powered by Seven Bridges](https://platform.sb.biodatacatalyst.nhlbi.nih.gov) with your username and password -- we will use this platform for all live demonstrations during the course.
+
+All of the R code and data can also be downloaded from the [github repository](https://github.com/UW-GAC/SISG_2021) from which the site is built and run on your local machine after the course has ended. Download the workshop data and exercises: https://github.com/UW-GAC/SISG_2021/archive/master.zip
+
+**Slack**
+
+Join the Slack channel here: https://uwbiostatisticssisg.slack.com
+
+
+## Schedule
+
+NOTE: All times are Pacific Daylight Time (GMT-07:00)
+
+**Wednesday, July 21**
+
+- **Zoom session 11:30-13:15 PDT** - Introduction and Genomic Data Storage
+    - **Lecture**
+        - Introduction ([slides](https://docs.google.com/presentation/d/1QMS6cSLso9eMl96P7A7OHmkDpN3g1qFyupQE7cOA4Fk/edit#slide=id.p)) ([recorded lecture](https://drive.google.com/file/d/1cJaxbXCvQyJumyvqWHHdErL2IfEZFiXI/view?usp=sharing))
+        - Using BioData Catalyst for SISG exercises ([instructions](https://docs.google.com/document/d/1nLMjNRYffphWl89XVEPbH5NHLbUDW4SK7ikeEcHbixo/edit?usp=sharing)) ([recorded lecture](https://drive.google.com/file/d/16r0y9P5GfWLHxu9YZoqDeBDy76KWWSOb/view?usp=sharing))
+        - Sequencing data formats ([slides](https://drive.google.com/file/d/1w_dEobxo6kzloQlIuHW_lUnwkPCYK-RP/view?usp=sharing)) ([recorded lecture](https://drive.google.com/file/d/1c7bvNRCI7lr1VtYBoYJOoo2vDpWVUoG7/view?usp=sharing))
+        - Intro to Genomic Data Structure  ([slides](https://drive.google.com/file/d/1_p6-peb89ppi54gsDEapRdHcRVaq3IAX/view?usp=sharing)) ([recorded lecture](https://drive.google.com/file/d/1s5s5cRSEH3tzWhQ_wk7U7ImPnaOxkhei/view?usp=sharing))
+    - **Interactive breakout rooms**
+        - GDS format ([Tutorial](https://uw-gac.github.io/SISG_2021/gds-format.html)) ([Exercise](https://uw-gac.github.io/SISG_2021/gds-format.html#exercises)) ([Solution](https://uw-gac.github.io/SISG_2021/gds-format.html#solutions))
+        - Discussion ([video](https://drive.google.com/file/d/1VeQ_Tz5ORJBDO1Hz-5V61FJx9MQXbCwf/view?usp=sharing))
+        
+- **Zoom session 13:45-14:30 PDT** - Phenotype harmonization
+    - **Lecture**
+        - Phenotype harmonization  ([slides](https://drive.google.com/file/d/10EKUJxTARdX52uMXcnOENBqDwhCcVwW2/view?usp=sharing)) ([recorded lecture](https://drive.google.com/file/d/1aW6YE0MeIHVL2GEvpil9ANB-l-kApg9r/view?usp=sharing))
+    - **Interactive breakout rooms**
+        - Harmonization in R ([Tutorial](https://uw-gac.github.io/SISG_2021/phenotype-harmonization.html))
+        - Discussion ([video](https://drive.google.com/file/d/11BXy7qnhiCMETbWzJRHmFRRwKqYUJrFe/view?usp=sharing))
+
+**Thursday, July 22**
+
+- **Zoom session 8:00-10:00 PDT** - Association tests, Part I
+    - **Lecture**
+        - Association tests: Methods and motivation  ([slides](https://drive.google.com/file/d/1caziaZ_tp0Brg_Atq0keiImSWx_GujXL/view?usp=sharing)) ([recorded lecture](https://drive.google.com/file/d/1ifzoM7pPm46EmOG7MbJfOxsrP9UxBMQN/view?usp=sharing))
+        - GENESIS for association tests  ([slides](https://drive.google.com/file/d/1LPGKgrhFb2Yzty-bTDsX9vlTxifsLcPl/view?usp=sharing)) ([recorded lecture](https://drive.google.com/file/d/18LzFw2WfV-LFmsCXM4g5fNTCJtldXhO7/view?usp=sharing))
+    - **Interactive breakout rooms**
+        - Null model ([Tutorial](https://uw-gac.github.io/SISG_2021/association-tests-part-i.html)) ([Exercise](https://uw-gac.github.io/SISG_2021/association-tests-part-i.html#exercise)) ([Solution](https://uw-gac.github.io/SISG_2021/association-tests-part-i.html#solution))
+        - Single-variant association tests ([Tutorial](https://uw-gac.github.io/SISG_2021/association-tests-part-i.html#single-variant-association-tests)) ([Exercise](https://uw-gac.github.io/SISG_2021/association-tests-part-i.html#exercise-1)) ([Solution](https://uw-gac.github.io/SISG_2021/association-tests-part-i.html#solution-1))
+        - Discussion ([video](https://drive.google.com/file/d/10036ypnPLM3wKcLSSSvWRCEW69rvJ8CQ/view?usp=sharing))
+        
+- **Zoom session 10:30-11:45 PDT** - Association tests, Part II
+    - **Lecture**
+        - Multiple variant association tests ([slides](https://drive.google.com/file/d/1XRcn9_Q0akqQkgKAD8DO_Cg4Nlk990gx/view?usp=sharing)) ([recorded lecture](https://drive.google.com/file/d/1f2mziHg6bLz7xcPmVrYizpxndr2yCxrv/view?usp=sharing))
+    - **Interactive breakout rooms**
+        - Sliding window tests ([Tutorial](https://uw-gac.github.io/SISG_2021/association-tests-part-ii.html)) ([Exercise](https://uw-gac.github.io/SISG_2021/association-tests-part-ii.html#exercise-2)) ([Solution](https://uw-gac.github.io/SISG_2021/association-tests-part-ii.html#solution-2))
+        - Discussion ([video](https://drive.google.com/file/d/1_QRZkeOYiVMEI4HSUXFf-pjI04LodpEx/view?usp=sharing))
+        
+- **Zoom session 12:45-14:30 PDT** - Population Structure and Relatedness
+    - **Lecture**
+        - Population structure inference  ([slides](https://drive.google.com/file/d/1fQoaiKu_Ngpc-SzvchCGbaamRV_a1MoT/view?usp=sharing)) ([recorded lecture](https://drive.google.com/file/d/1B4QPFYCJEyRPUXoEIKkjDbeI0qYlrYZ5/view?usp=sharing))
+        - Relatedness inference  ([slides](https://drive.google.com/file/d/1kC_158wmq8vJyRc8eW_N3hJvbXq_1mdy/view?usp=sharing)) ([recorded lecture](https://drive.google.com/file/d/1uZWhJJDXeq4cs9CiouZAo6mrWsUnm3F0/view?usp=sharing))
+        - Ancestry and relatedness inference with GDS ([slides](https://drive.google.com/file/d/1RMHcoe3lrK02tZ2Vy_B7XQEZChSlgpTh/view?usp=sharing)) ([recorded lecture](https://drive.google.com/file/d/1ktGAzzBwFyD3tOmfA1R8iBthFza3nJOl/view?usp=sharing))
+    - **Interactive breakout rooms**
+        - Ancestry and relatedness inference ([Tutorial](https://uw-gac.github.io/SISG_2021/ancestry-and-relatedness-inference.html)) ([Exercises](https://uw-gac.github.io/SISG_2021/ancestry-and-relatedness-inference.html#exercises-1)) ([Solutions](https://uw-gac.github.io/SISG_2021/ancestry-and-relatedness-inference.html#solutions-1))
+        - Discussion ([video](https://drive.google.com/file/d/1hCki6AGCcU43Rc-nyKUS6PvI7rbTkKHM/view?usp=sharing))
+
+**Friday, July 23**
+
+- **Zoom session 8:00-9:30 PDT** - Mixed models
+    - **Lecture**
+        - Mixed model association testing  ([slides](https://drive.google.com/file/d/13s5sYnol3hbpCEj6wB-98JjOpS2CmHCn/view?usp=sharing)) ([recorded lecture](https://drive.google.com/file/d/1ukI9Y8_trfdk_NuUjGNcjpIjX2sOlqr4/view?usp=sharing))
+    - **Interactive breakout rooms**
+        - Mixed models in R ([Tutorial](https://uw-gac.github.io/SISG_2021/mixed-models.html)) ([Exercise](https://uw-gac.github.io/SISG_2021/mixed-models.html#exercise-3)) ([Solution](https://uw-gac.github.io/SISG_2021/mixed-models.html#solution-3))
+        - Discussion ([video](https://drive.google.com/file/d/12cetH1FUjoTPF0e84-P3FBJrYU4EE1cq/view?usp=sharing))
+        
+- **Zoom session 9:45-11:30 PDT** - Variant annotation
+    - **Lecture**
+        - Variant annotation ([slides](https://drive.google.com/file/d/1tpIKgTjrZGusiy5oAQaVKi7p09rXPuwY/view)) ([recorded lecture](https://drive.google.com/file/d/1kecws4cMs8zEdbmzLV3YLSSi8JjHcUhG/view?usp=sharing))
+        - Annotation Explorer demo ([video tutorial](https://drive.google.com/file/d/1rq4gulALZ8IAjpV2hMzEoE0IK3-7ko9P/view?usp=sharing)) ([text tutorial](https://docs.google.com/document/d/1_yXemTTYnBzL6Dv4fngojE0T5CAH3Z-CSxj1X5Qq8kI/edit)) ([Exercise](https://uw-gac.github.io/SISG_2021/variant-annotation.html)) ([Solution](https://uw-gac.github.io/SISG_2021/variant-annotation.html#solution-4))
+    - **Interactive breakout rooms**
+        - Association testing using variant annotation ([Tutorial](https://uw-gac.github.io/SISG_2021/annotation-informed-aggregate-association-tests.html)) ([Exercise](https://uw-gac.github.io/SISG_2021/annotation-informed-aggregate-association-tests.html#exercise-5)) ([Solution](https://uw-gac.github.io/SISG_2021/annotation-informed-aggregate-association-tests.html#solution-5))
+        - Discussion ([video](https://drive.google.com/file/d/1Bq12_xhUxTzTLhDcqcRXmu65IcCWRjql/view?usp=sharing))
+        
+- **Zoom session 12:30-13:45 PDT** - Working in the cloud
+    - **Lecture**
+        - Analysis pipelines on the cloud   ([slides](https://drive.google.com/file/d/1t3hSRNT8_QQWO_5Xi0mZbf957b_C38o_/view?usp=sharing)) ([recorded lecture](https://drive.google.com/file/d/1-hdKVLYcgKEPkJ_9cB7J6sJ45xub8Uph/view?usp=sharing))
+        - Running a workflow on BioData Catalyst ([recorded demo](https://drive.google.com/file/d/15_Bq3Mqe6cUXqX_tGlF46rGV74vJPa46/view?usp=sharing))
+    - **Interactive breakout rooms**
+        - Running a GWAS workflow ([Tutorial](https://uw-gac.github.io/SISG_2021/running-a-gwas-workflow-on-biodata-catalyst.html))
+        - Discussion ([video](https://drive.google.com/file/d/10qsJJQA5JFfsAX2ixgwbTdJuyVaQQas7/view?usp=sharing))
+        
+- **Zoom session 14:00-14:30 PDT** - Open session for questions/advice
+    - Discussion ([video](https://drive.google.com/file/d/1VzvnNovGRWnFsizzwsdf1Nbi4w7Q5xON/view?usp=sharing))
+
+
+## R packages used
+
+- [GENESIS](http://bioconductor.org/packages/release/bioc/html/GENESIS.html)
+- [SeqArray](http://bioconductor.org/packages/release/bioc/html/SeqArray.html)
+- [SeqVarTools](http://bioconductor.org/packages/release/bioc/html/SeqVarTools.html)
+- [SNPRelate](http://bioconductor.org/packages/release/bioc/html/SNPRelate.html)
+- [TopmedPipeline](https://github.com/UW-GAC/analysis_pipeline/tree/master/TopmedPipeline)
+- [tidyverse](https://www.tidyverse.org)
+- [GGally](https://cran.r-project.org/web/packages/GGally)
+
+
+## Resources
+
+NHLBI BioData Catalyst Powered by Seven Bridges 
+
+- [Getting Started Guide for SISG21 Module 16](https://drive.google.com/file/d/1LMlzot2GXPKCRmLH6BtsOi9PxKAoohYT/view?usp=sharing)
+
+If you are new to R, you might find the following material helpful:
+
+- [Introduction to R](http://faculty.washington.edu/kenrice/rintro/indexSEA15.shtml) materials from SISG Module 3
+- Graphics with [ggplot2](https://ggplot2.tidyverse.org/)
+- Data manipulation with [dplyr](http://dplyr.tidyverse.org/)

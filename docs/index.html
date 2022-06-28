@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>SISG 2021 Module 16: Computational Pipeline for WGS Data</title>
+  <meta name="description" content="Course materials for SISG 2021 Module 16" />
+  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="SISG 2021 Module 16: Computational Pipeline for WGS Data" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Course materials for SISG 2021 Module 16" />
+  <meta name="github-repo" content="UW-GAC/SISG_2021" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="SISG 2021 Module 16: Computational Pipeline for WGS Data" />
+  
+  <meta name="twitter:description" content="Course materials for SISG 2021 Module 16" />
+  
+
+
+
+<meta name="date" content="2021-08-09" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+
+<link rel="next" href="gds-format.html"/>
+<script src="libs/header-attrs-2.9/header-attrs.js"></script>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+
+
+
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#schedule"><i class="fa fa-check"></i><b>1.1</b> Schedule</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#r-packages-used"><i class="fa fa-check"></i><b>1.2</b> R packages used</a></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#resources"><i class="fa fa-check"></i><b>1.3</b> Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="gds-format.html"><a href="gds-format.html"><i class="fa fa-check"></i><b>2</b> GDS format</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="gds-format.html"><a href="gds-format.html#convert-a-vcf-to-gds"><i class="fa fa-check"></i><b>2.1</b> Convert a VCF to GDS</a></li>
+<li class="chapter" data-level="2.2" data-path="gds-format.html"><a href="gds-format.html#exploring-a-gds-file"><i class="fa fa-check"></i><b>2.2</b> Exploring a GDS file</a></li>
+<li class="chapter" data-level="2.3" data-path="gds-format.html"><a href="gds-format.html#exercises"><i class="fa fa-check"></i><b>2.3</b> Exercises</a></li>
+<li class="chapter" data-level="2.4" data-path="gds-format.html"><a href="gds-format.html#solutions"><i class="fa fa-check"></i><b>2.4</b> Solutions</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="phenotype-harmonization.html"><a href="phenotype-harmonization.html"><i class="fa fa-check"></i><b>3</b> Phenotype Harmonization</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="phenotype-harmonization.html"><a href="phenotype-harmonization.html#inspect-individual-study-data-in-r"><i class="fa fa-check"></i><b>3.1</b> Inspect individual study data in R</a></li>
+<li class="chapter" data-level="3.2" data-path="phenotype-harmonization.html"><a href="phenotype-harmonization.html#compare-study-values"><i class="fa fa-check"></i><b>3.2</b> Compare study values</a></li>
+<li class="chapter" data-level="3.3" data-path="phenotype-harmonization.html"><a href="phenotype-harmonization.html#using-regression-models-to-compare-studies"><i class="fa fa-check"></i><b>3.3</b> Using regression models to compare studies</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="phenotype-harmonization.html"><a href="phenotype-harmonization.html#create-an-annotated-data-frame"><i class="fa fa-check"></i><b>3.3.1</b> Create an Annotated Data Frame</a></li>
+<li class="chapter" data-level="3.3.2" data-path="phenotype-harmonization.html"><a href="phenotype-harmonization.html#fit-a-regression-model-without-study"><i class="fa fa-check"></i><b>3.3.2</b> Fit a regression model without study</a></li>
+<li class="chapter" data-level="3.3.3" data-path="phenotype-harmonization.html"><a href="phenotype-harmonization.html#fit-a-model-with-study"><i class="fa fa-check"></i><b>3.3.3</b> Fit a model with study</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="phenotype-harmonization.html"><a href="phenotype-harmonization.html#final-considerations"><i class="fa fa-check"></i><b>3.4</b> Final considerations</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="association-tests-part-i.html"><a href="association-tests-part-i.html"><i class="fa fa-check"></i><b>4</b> Association tests - Part I</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="association-tests-part-i.html"><a href="association-tests-part-i.html#null-model"><i class="fa fa-check"></i><b>4.1</b> Null model</a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="association-tests-part-i.html"><a href="association-tests-part-i.html#prepare-the-data"><i class="fa fa-check"></i><b>4.1.1</b> Prepare the data</a></li>
+<li class="chapter" data-level="4.1.2" data-path="association-tests-part-i.html"><a href="association-tests-part-i.html#fit-the-null-model"><i class="fa fa-check"></i><b>4.1.2</b> Fit the null model</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="association-tests-part-i.html"><a href="association-tests-part-i.html#exercise"><i class="fa fa-check"></i><b>4.2</b> Exercise</a></li>
+<li class="chapter" data-level="4.3" data-path="association-tests-part-i.html"><a href="association-tests-part-i.html#solution"><i class="fa fa-check"></i><b>4.3</b> Solution</a></li>
+<li class="chapter" data-level="4.4" data-path="association-tests-part-i.html"><a href="association-tests-part-i.html#single-variant-association-tests"><i class="fa fa-check"></i><b>4.4</b> Single-variant association tests</a></li>
+<li class="chapter" data-level="4.5" data-path="association-tests-part-i.html"><a href="association-tests-part-i.html#exercise-1"><i class="fa fa-check"></i><b>4.5</b> Exercise</a></li>
+<li class="chapter" data-level="4.6" data-path="association-tests-part-i.html"><a href="association-tests-part-i.html#solution-1"><i class="fa fa-check"></i><b>4.6</b> Solution</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="association-tests-part-ii.html"><a href="association-tests-part-ii.html"><i class="fa fa-check"></i><b>5</b> Association tests - Part II</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="association-tests-part-ii.html"><a href="association-tests-part-ii.html#sliding-window-tests"><i class="fa fa-check"></i><b>5.1</b> Sliding window tests</a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="association-tests-part-ii.html"><a href="association-tests-part-ii.html#burden-test"><i class="fa fa-check"></i><b>5.1.1</b> Burden test</a></li>
+<li class="chapter" data-level="5.1.2" data-path="association-tests-part-ii.html"><a href="association-tests-part-ii.html#skat-test"><i class="fa fa-check"></i><b>5.1.2</b> SKAT test</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="association-tests-part-ii.html"><a href="association-tests-part-ii.html#exercise-2"><i class="fa fa-check"></i><b>5.2</b> Exercise</a></li>
+<li class="chapter" data-level="5.3" data-path="association-tests-part-ii.html"><a href="association-tests-part-ii.html#solution-2"><i class="fa fa-check"></i><b>5.3</b> Solution</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="ancestry-and-relatedness-inference.html"><a href="ancestry-and-relatedness-inference.html"><i class="fa fa-check"></i><b>6</b> Ancestry and Relatedness Inference</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="ancestry-and-relatedness-inference.html"><a href="ancestry-and-relatedness-inference.html#ld-pruning"><i class="fa fa-check"></i><b>6.1</b> LD-pruning</a></li>
+<li class="chapter" data-level="6.2" data-path="ancestry-and-relatedness-inference.html"><a href="ancestry-and-relatedness-inference.html#computing-a-grm"><i class="fa fa-check"></i><b>6.2</b> Computing a GRM</a></li>
+<li class="chapter" data-level="6.3" data-path="ancestry-and-relatedness-inference.html"><a href="ancestry-and-relatedness-inference.html#de-convoluting-ancestry-and-relatedness"><i class="fa fa-check"></i><b>6.3</b> De-convoluting ancestry and relatedness</a>
+<ul>
+<li class="chapter" data-level="6.3.1" data-path="ancestry-and-relatedness-inference.html"><a href="ancestry-and-relatedness-inference.html#king"><i class="fa fa-check"></i><b>6.3.1</b> KING</a></li>
+<li class="chapter" data-level="6.3.2" data-path="ancestry-and-relatedness-inference.html"><a href="ancestry-and-relatedness-inference.html#pc-air"><i class="fa fa-check"></i><b>6.3.2</b> PC-AiR</a></li>
+<li class="chapter" data-level="6.3.3" data-path="ancestry-and-relatedness-inference.html"><a href="ancestry-and-relatedness-inference.html#pc-relate"><i class="fa fa-check"></i><b>6.3.3</b> PC-Relate</a></li>
+</ul></li>
+<li class="chapter" data-level="6.4" data-path="ancestry-and-relatedness-inference.html"><a href="ancestry-and-relatedness-inference.html#exercises-1"><i class="fa fa-check"></i><b>6.4</b> Exercises</a></li>
+<li class="chapter" data-level="6.5" data-path="ancestry-and-relatedness-inference.html"><a href="ancestry-and-relatedness-inference.html#solutions-1"><i class="fa fa-check"></i><b>6.5</b> Solutions</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="mixed-models.html"><a href="mixed-models.html"><i class="fa fa-check"></i><b>7</b> Mixed models</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="mixed-models.html"><a href="mixed-models.html#null-model-1"><i class="fa fa-check"></i><b>7.1</b> Null model</a></li>
+<li class="chapter" data-level="7.2" data-path="mixed-models.html"><a href="mixed-models.html#single-variant-tests"><i class="fa fa-check"></i><b>7.2</b> Single-variant tests</a></li>
+<li class="chapter" data-level="7.3" data-path="mixed-models.html"><a href="mixed-models.html#exercise-3"><i class="fa fa-check"></i><b>7.3</b> Exercise</a></li>
+<li class="chapter" data-level="7.4" data-path="mixed-models.html"><a href="mixed-models.html#solution-3"><i class="fa fa-check"></i><b>7.4</b> Solution</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="variant-annotation.html"><a href="variant-annotation.html"><i class="fa fa-check"></i><b>8</b> Variant annotation</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="variant-annotation.html"><a href="variant-annotation.html#use-cases"><i class="fa fa-check"></i><b>8.1</b> Use cases</a>
+<ul>
+<li class="chapter" data-level="8.1.1" data-path="variant-annotation.html"><a href="variant-annotation.html#use-case-1"><i class="fa fa-check"></i><b>8.1.1</b> Use case 1</a></li>
+<li class="chapter" data-level="8.1.2" data-path="variant-annotation.html"><a href="variant-annotation.html#use-case-2"><i class="fa fa-check"></i><b>8.1.2</b> Use case 2</a></li>
+<li class="chapter" data-level="8.1.3" data-path="variant-annotation.html"><a href="variant-annotation.html#use-case-3"><i class="fa fa-check"></i><b>8.1.3</b> Use case 3</a></li>
+</ul></li>
+<li class="chapter" data-level="8.2" data-path="variant-annotation.html"><a href="variant-annotation.html#exercise-4"><i class="fa fa-check"></i><b>8.2</b> Exercise</a></li>
+<li class="chapter" data-level="8.3" data-path="variant-annotation.html"><a href="variant-annotation.html#solution-4"><i class="fa fa-check"></i><b>8.3</b> Solution</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="annotation-informed-aggregate-association-tests.html"><a href="annotation-informed-aggregate-association-tests.html"><i class="fa fa-check"></i><b>9</b> Annotation informed aggregate association tests</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="annotation-informed-aggregate-association-tests.html"><a href="annotation-informed-aggregate-association-tests.html#aggregate-unit-for-association-testing-exercise"><i class="fa fa-check"></i><b>9.1</b> Aggregate unit for association testing exercise</a></li>
+<li class="chapter" data-level="9.2" data-path="annotation-informed-aggregate-association-tests.html"><a href="annotation-informed-aggregate-association-tests.html#association-testing-with-aggregate-units"><i class="fa fa-check"></i><b>9.2</b> Association testing with aggregate units</a></li>
+<li class="chapter" data-level="9.3" data-path="annotation-informed-aggregate-association-tests.html"><a href="annotation-informed-aggregate-association-tests.html#exercise-5"><i class="fa fa-check"></i><b>9.3</b> Exercise</a></li>
+<li class="chapter" data-level="9.4" data-path="annotation-informed-aggregate-association-tests.html"><a href="annotation-informed-aggregate-association-tests.html#solution-5"><i class="fa fa-check"></i><b>9.4</b> Solution</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="running-a-gwas-workflow-on-biodata-catalyst.html"><a href="running-a-gwas-workflow-on-biodata-catalyst.html"><i class="fa fa-check"></i><b>10</b> Running a GWAS workflow on BioData Catalyst</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="running-a-gwas-workflow-on-biodata-catalyst.html"><a href="running-a-gwas-workflow-on-biodata-catalyst.html#preparing-the-genotype-data"><i class="fa fa-check"></i><b>10.1</b> Preparing the genotype data</a>
+<ul>
+<li class="chapter" data-level="10.1.1" data-path="running-a-gwas-workflow-on-biodata-catalyst.html"><a href="running-a-gwas-workflow-on-biodata-catalyst.html#bcftools-merge-and-filter"><i class="fa fa-check"></i><b>10.1.1</b> Bcftools Merge and Filter</a></li>
+<li class="chapter" data-level="10.1.2" data-path="running-a-gwas-workflow-on-biodata-catalyst.html"><a href="running-a-gwas-workflow-on-biodata-catalyst.html#vcf-to-gds-converter"><i class="fa fa-check"></i><b>10.1.2</b> VCF to GDS Converter</a></li>
+</ul></li>
+<li class="chapter" data-level="10.2" data-path="running-a-gwas-workflow-on-biodata-catalyst.html"><a href="running-a-gwas-workflow-on-biodata-catalyst.html#ancestry-and-relatedness"><i class="fa fa-check"></i><b>10.2</b> Ancestry and Relatedness</a>
+<ul>
+<li class="chapter" data-level="10.2.1" data-path="running-a-gwas-workflow-on-biodata-catalyst.html"><a href="running-a-gwas-workflow-on-biodata-catalyst.html#king-robust"><i class="fa fa-check"></i><b>10.2.1</b> KING robust</a></li>
+<li class="chapter" data-level="10.2.2" data-path="running-a-gwas-workflow-on-biodata-catalyst.html"><a href="running-a-gwas-workflow-on-biodata-catalyst.html#pc-air-1"><i class="fa fa-check"></i><b>10.2.2</b> PC-AiR</a></li>
+<li class="chapter" data-level="10.2.3" data-path="running-a-gwas-workflow-on-biodata-catalyst.html"><a href="running-a-gwas-workflow-on-biodata-catalyst.html#pc-relate-1"><i class="fa fa-check"></i><b>10.2.3</b> PC-Relate</a></li>
+</ul></li>
+<li class="chapter" data-level="10.3" data-path="running-a-gwas-workflow-on-biodata-catalyst.html"><a href="running-a-gwas-workflow-on-biodata-catalyst.html#association-testing"><i class="fa fa-check"></i><b>10.3</b> Association Testing</a>
+<ul>
+<li class="chapter" data-level="10.3.1" data-path="running-a-gwas-workflow-on-biodata-catalyst.html"><a href="running-a-gwas-workflow-on-biodata-catalyst.html#null-model-2"><i class="fa fa-check"></i><b>10.3.1</b> Null Model</a></li>
+<li class="chapter" data-level="10.3.2" data-path="running-a-gwas-workflow-on-biodata-catalyst.html"><a href="running-a-gwas-workflow-on-biodata-catalyst.html#single-variant-association-test"><i class="fa fa-check"></i><b>10.3.2</b> Single variant association test</a></li>
+<li class="chapter" data-level="10.3.3" data-path="running-a-gwas-workflow-on-biodata-catalyst.html"><a href="running-a-gwas-workflow-on-biodata-catalyst.html#aggregate-variant-test"><i class="fa fa-check"></i><b>10.3.3</b> Aggregate variant test</a></li>
+</ul></li>
+<li class="chapter" data-level="10.4" data-path="running-a-gwas-workflow-on-biodata-catalyst.html"><a href="running-a-gwas-workflow-on-biodata-catalyst.html#analysis-follow-up"><i class="fa fa-check"></i><b>10.4</b> Analysis follow-up</a></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">SISG 2021 Module 16: Computational Pipeline for WGS Data</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="header">
+<h1 class="title">SISG 2021 Module 16: Computational Pipeline for WGS Data</h1>
+<p class="date" style="margin-top: 1.5em;"><em>2021-08-09</em></p>
+</div>
+<div id="introduction" class="section level1" number="1">
+<h1><span class="header-section-number">1</span> Introduction</h1>
+<p>This site contains course materials for SISG Module 16: Computational Pipeline for WGS Data, July 21-23, 2021. The official SISG web page can be found <a href="https://si.biostat.washington.edu/suminst/sisg2021/modules/SM2116">here</a> (requires login) – <strong>course evaluations and certificates of completion are available via this page.</strong></p>
+<p><strong>Lectures</strong></p>
+<p>Slides for lectures are linked below in the schedule. All lectures will be given via Zoom, and recordings of lectures will be posted afterwards.</p>
+<p><strong>Zoom</strong></p>
+<p>Link for lectures: <a href="https://washington.zoom.us/j/92319788832" class="uri">https://washington.zoom.us/j/92319788832</a></p>
+<p><strong>Tutorials and Exercises</strong></p>
+<p>To work through the tutorials and exercises, log into <a href="https://platform.sb.biodatacatalyst.nhlbi.nih.gov">NHLBI BioData Catalyst powered by Seven Bridges</a> with your username and password – we will use this platform for all live demonstrations during the course.</p>
+<p>All of the R code and data can also be downloaded from the <a href="https://github.com/UW-GAC/SISG_2021">github repository</a> from which the site is built and run on your local machine after the course has ended. Download the workshop data and exercises: <a href="https://github.com/UW-GAC/SISG_2021/archive/master.zip" class="uri">https://github.com/UW-GAC/SISG_2021/archive/master.zip</a></p>
+<p><strong>Slack</strong></p>
+<p>Join the Slack channel here: <a href="https://uwbiostatisticssisg.slack.com" class="uri">https://uwbiostatisticssisg.slack.com</a></p>
+<div id="schedule" class="section level2" number="1.1">
+<h2><span class="header-section-number">1.1</span> Schedule</h2>
+<p>NOTE: All times are Pacific Daylight Time (GMT-07:00)</p>
+<p><strong>Wednesday, July 21</strong></p>
+<ul>
+<li><strong>Zoom session 11:30-13:15 PDT</strong> - Introduction and Genomic Data Storage
+<ul>
+<li><strong>Lecture</strong>
+<ul>
+<li>Introduction (<a href="https://docs.google.com/presentation/d/1QMS6cSLso9eMl96P7A7OHmkDpN3g1qFyupQE7cOA4Fk/edit#slide=id.p">slides</a>) (<a href="https://drive.google.com/file/d/1cJaxbXCvQyJumyvqWHHdErL2IfEZFiXI/view?usp=sharing">recorded lecture</a>)</li>
+<li>Using BioData Catalyst for SISG exercises (<a href="https://docs.google.com/document/d/1nLMjNRYffphWl89XVEPbH5NHLbUDW4SK7ikeEcHbixo/edit?usp=sharing">instructions</a>) (<a href="https://drive.google.com/file/d/16r0y9P5GfWLHxu9YZoqDeBDy76KWWSOb/view?usp=sharing">recorded lecture</a>)</li>
+<li>Sequencing data formats (<a href="https://drive.google.com/file/d/1w_dEobxo6kzloQlIuHW_lUnwkPCYK-RP/view?usp=sharing">slides</a>) (<a href="https://drive.google.com/file/d/1c7bvNRCI7lr1VtYBoYJOoo2vDpWVUoG7/view?usp=sharing">recorded lecture</a>)</li>
+<li>Intro to Genomic Data Structure (<a href="https://drive.google.com/file/d/1_p6-peb89ppi54gsDEapRdHcRVaq3IAX/view?usp=sharing">slides</a>) (<a href="https://drive.google.com/file/d/1s5s5cRSEH3tzWhQ_wk7U7ImPnaOxkhei/view?usp=sharing">recorded lecture</a>)</li>
+</ul></li>
+<li><strong>Interactive breakout rooms</strong>
+<ul>
+<li>GDS format (<a href="https://uw-gac.github.io/SISG_2021/gds-format.html">Tutorial</a>) (<a href="https://uw-gac.github.io/SISG_2021/gds-format.html#exercises">Exercise</a>) (<a href="https://uw-gac.github.io/SISG_2021/gds-format.html#solutions">Solution</a>)</li>
+<li>Discussion (<a href="https://drive.google.com/file/d/1VeQ_Tz5ORJBDO1Hz-5V61FJx9MQXbCwf/view?usp=sharing">video</a>)</li>
+</ul></li>
+</ul></li>
+<li><strong>Zoom session 13:45-14:30 PDT</strong> - Phenotype harmonization
+<ul>
+<li><strong>Lecture</strong>
+<ul>
+<li>Phenotype harmonization (<a href="https://drive.google.com/file/d/10EKUJxTARdX52uMXcnOENBqDwhCcVwW2/view?usp=sharing">slides</a>) (<a href="https://drive.google.com/file/d/1aW6YE0MeIHVL2GEvpil9ANB-l-kApg9r/view?usp=sharing">recorded lecture</a>)</li>
+</ul></li>
+<li><strong>Interactive breakout rooms</strong>
+<ul>
+<li>Harmonization in R (<a href="https://uw-gac.github.io/SISG_2021/phenotype-harmonization.html">Tutorial</a>)</li>
+<li>Discussion (<a href="https://drive.google.com/file/d/11BXy7qnhiCMETbWzJRHmFRRwKqYUJrFe/view?usp=sharing">video</a>)</li>
+</ul></li>
+</ul></li>
+</ul>
+<p><strong>Thursday, July 22</strong></p>
+<ul>
+<li><strong>Zoom session 8:00-10:00 PDT</strong> - Association tests, Part I
+<ul>
+<li><strong>Lecture</strong>
+<ul>
+<li>Association tests: Methods and motivation (<a href="https://drive.google.com/file/d/1caziaZ_tp0Brg_Atq0keiImSWx_GujXL/view?usp=sharing">slides</a>) (<a href="https://drive.google.com/file/d/1ifzoM7pPm46EmOG7MbJfOxsrP9UxBMQN/view?usp=sharing">recorded lecture</a>)</li>
+<li>GENESIS for association tests (<a href="https://drive.google.com/file/d/1LPGKgrhFb2Yzty-bTDsX9vlTxifsLcPl/view?usp=sharing">slides</a>) (<a href="https://drive.google.com/file/d/18LzFw2WfV-LFmsCXM4g5fNTCJtldXhO7/view?usp=sharing">recorded lecture</a>)</li>
+</ul></li>
+<li><strong>Interactive breakout rooms</strong>
+<ul>
+<li>Null model (<a href="https://uw-gac.github.io/SISG_2021/association-tests-part-i.html">Tutorial</a>) (<a href="https://uw-gac.github.io/SISG_2021/association-tests-part-i.html#exercise">Exercise</a>) (<a href="https://uw-gac.github.io/SISG_2021/association-tests-part-i.html#solution">Solution</a>)</li>
+<li>Single-variant association tests (<a href="https://uw-gac.github.io/SISG_2021/association-tests-part-i.html#single-variant-association-tests">Tutorial</a>) (<a href="https://uw-gac.github.io/SISG_2021/association-tests-part-i.html#exercise-1">Exercise</a>) (<a href="https://uw-gac.github.io/SISG_2021/association-tests-part-i.html#solution-1">Solution</a>)</li>
+<li>Discussion (<a href="https://drive.google.com/file/d/10036ypnPLM3wKcLSSSvWRCEW69rvJ8CQ/view?usp=sharing">video</a>)</li>
+</ul></li>
+</ul></li>
+<li><strong>Zoom session 10:30-11:45 PDT</strong> - Association tests, Part II
+<ul>
+<li><strong>Lecture</strong>
+<ul>
+<li>Multiple variant association tests (<a href="https://drive.google.com/file/d/1XRcn9_Q0akqQkgKAD8DO_Cg4Nlk990gx/view?usp=sharing">slides</a>) (<a href="https://drive.google.com/file/d/1f2mziHg6bLz7xcPmVrYizpxndr2yCxrv/view?usp=sharing">recorded lecture</a>)</li>
+</ul></li>
+<li><strong>Interactive breakout rooms</strong>
+<ul>
+<li>Sliding window tests (<a href="https://uw-gac.github.io/SISG_2021/association-tests-part-ii.html">Tutorial</a>) (<a href="https://uw-gac.github.io/SISG_2021/association-tests-part-ii.html#exercise-2">Exercise</a>) (<a href="https://uw-gac.github.io/SISG_2021/association-tests-part-ii.html#solution-2">Solution</a>)</li>
+<li>Discussion (<a href="https://drive.google.com/file/d/1_QRZkeOYiVMEI4HSUXFf-pjI04LodpEx/view?usp=sharing">video</a>)</li>
+</ul></li>
+</ul></li>
+<li><strong>Zoom session 12:45-14:30 PDT</strong> - Population Structure and Relatedness
+<ul>
+<li><strong>Lecture</strong>
+<ul>
+<li>Population structure inference (<a href="https://drive.google.com/file/d/1fQoaiKu_Ngpc-SzvchCGbaamRV_a1MoT/view?usp=sharing">slides</a>) (<a href="https://drive.google.com/file/d/1B4QPFYCJEyRPUXoEIKkjDbeI0qYlrYZ5/view?usp=sharing">recorded lecture</a>)</li>
+<li>Relatedness inference (<a href="https://drive.google.com/file/d/1kC_158wmq8vJyRc8eW_N3hJvbXq_1mdy/view?usp=sharing">slides</a>) (<a href="https://drive.google.com/file/d/1uZWhJJDXeq4cs9CiouZAo6mrWsUnm3F0/view?usp=sharing">recorded lecture</a>)</li>
+<li>Ancestry and relatedness inference with GDS (<a href="https://drive.google.com/file/d/1RMHcoe3lrK02tZ2Vy_B7XQEZChSlgpTh/view?usp=sharing">slides</a>) (<a href="https://drive.google.com/file/d/1ktGAzzBwFyD3tOmfA1R8iBthFza3nJOl/view?usp=sharing">recorded lecture</a>)</li>
+</ul></li>
+<li><strong>Interactive breakout rooms</strong>
+<ul>
+<li>Ancestry and relatedness inference (<a href="https://uw-gac.github.io/SISG_2021/ancestry-and-relatedness-inference.html">Tutorial</a>) (<a href="https://uw-gac.github.io/SISG_2021/ancestry-and-relatedness-inference.html#exercises-1">Exercises</a>) (<a href="https://uw-gac.github.io/SISG_2021/ancestry-and-relatedness-inference.html#solutions-1">Solutions</a>)</li>
+<li>Discussion (<a href="https://drive.google.com/file/d/1hCki6AGCcU43Rc-nyKUS6PvI7rbTkKHM/view?usp=sharing">video</a>)</li>
+</ul></li>
+</ul></li>
+</ul>
+<p><strong>Friday, July 23</strong></p>
+<ul>
+<li><strong>Zoom session 8:00-9:30 PDT</strong> - Mixed models
+<ul>
+<li><strong>Lecture</strong>
+<ul>
+<li>Mixed model association testing (<a href="https://drive.google.com/file/d/13s5sYnol3hbpCEj6wB-98JjOpS2CmHCn/view?usp=sharing">slides</a>) (<a href="https://drive.google.com/file/d/1ukI9Y8_trfdk_NuUjGNcjpIjX2sOlqr4/view?usp=sharing">recorded lecture</a>)</li>
+</ul></li>
+<li><strong>Interactive breakout rooms</strong>
+<ul>
+<li>Mixed models in R (<a href="https://uw-gac.github.io/SISG_2021/mixed-models.html">Tutorial</a>) (<a href="https://uw-gac.github.io/SISG_2021/mixed-models.html#exercise-3">Exercise</a>) (<a href="https://uw-gac.github.io/SISG_2021/mixed-models.html#solution-3">Solution</a>)</li>
+<li>Discussion (<a href="https://drive.google.com/file/d/12cetH1FUjoTPF0e84-P3FBJrYU4EE1cq/view?usp=sharing">video</a>)</li>
+</ul></li>
+</ul></li>
+<li><strong>Zoom session 9:45-11:30 PDT</strong> - Variant annotation
+<ul>
+<li><strong>Lecture</strong>
+<ul>
+<li>Variant annotation (<a href="https://drive.google.com/file/d/1tpIKgTjrZGusiy5oAQaVKi7p09rXPuwY/view">slides</a>) (<a href="https://drive.google.com/file/d/1kecws4cMs8zEdbmzLV3YLSSi8JjHcUhG/view?usp=sharing">recorded lecture</a>)</li>
+<li>Annotation Explorer demo (<a href="https://drive.google.com/file/d/1rq4gulALZ8IAjpV2hMzEoE0IK3-7ko9P/view?usp=sharing">video tutorial</a>) (<a href="https://docs.google.com/document/d/1_yXemTTYnBzL6Dv4fngojE0T5CAH3Z-CSxj1X5Qq8kI/edit">text tutorial</a>) (<a href="https://uw-gac.github.io/SISG_2021/variant-annotation.html">Exercise</a>) (<a href="https://uw-gac.github.io/SISG_2021/variant-annotation.html#solution-4">Solution</a>)</li>
+</ul></li>
+<li><strong>Interactive breakout rooms</strong>
+<ul>
+<li>Association testing using variant annotation (<a href="https://uw-gac.github.io/SISG_2021/annotation-informed-aggregate-association-tests.html">Tutorial</a>) (<a href="https://uw-gac.github.io/SISG_2021/annotation-informed-aggregate-association-tests.html#exercise-5">Exercise</a>) (<a href="https://uw-gac.github.io/SISG_2021/annotation-informed-aggregate-association-tests.html#solution-5">Solution</a>)</li>
+<li>Discussion (<a href="https://drive.google.com/file/d/1Bq12_xhUxTzTLhDcqcRXmu65IcCWRjql/view?usp=sharing">video</a>)</li>
+</ul></li>
+</ul></li>
+<li><strong>Zoom session 12:30-13:45 PDT</strong> - Working in the cloud
+<ul>
+<li><strong>Lecture</strong>
+<ul>
+<li>Analysis pipelines on the cloud (<a href="https://drive.google.com/file/d/1t3hSRNT8_QQWO_5Xi0mZbf957b_C38o_/view?usp=sharing">slides</a>) (<a href="https://drive.google.com/file/d/1-hdKVLYcgKEPkJ_9cB7J6sJ45xub8Uph/view?usp=sharing">recorded lecture</a>)</li>
+<li>Running a workflow on BioData Catalyst (<a href="https://drive.google.com/file/d/15_Bq3Mqe6cUXqX_tGlF46rGV74vJPa46/view?usp=sharing">recorded demo</a>)</li>
+</ul></li>
+<li><strong>Interactive breakout rooms</strong>
+<ul>
+<li>Running a GWAS workflow (<a href="https://uw-gac.github.io/SISG_2021/running-a-gwas-workflow-on-biodata-catalyst.html">Tutorial</a>)</li>
+<li>Discussion (<a href="https://drive.google.com/file/d/10qsJJQA5JFfsAX2ixgwbTdJuyVaQQas7/view?usp=sharing">video</a>)</li>
+</ul></li>
+</ul></li>
+<li><strong>Zoom session 14:00-14:30 PDT</strong> - Open session for questions/advice
+<ul>
+<li>Discussion (<a href="https://drive.google.com/file/d/1VzvnNovGRWnFsizzwsdf1Nbi4w7Q5xON/view?usp=sharing">video</a>)</li>
+</ul></li>
+</ul>
+</div>
+<div id="r-packages-used" class="section level2" number="1.2">
+<h2><span class="header-section-number">1.2</span> R packages used</h2>
+<ul>
+<li><a href="http://bioconductor.org/packages/release/bioc/html/GENESIS.html">GENESIS</a></li>
+<li><a href="http://bioconductor.org/packages/release/bioc/html/SeqArray.html">SeqArray</a></li>
+<li><a href="http://bioconductor.org/packages/release/bioc/html/SeqVarTools.html">SeqVarTools</a></li>
+<li><a href="http://bioconductor.org/packages/release/bioc/html/SNPRelate.html">SNPRelate</a></li>
+<li><a href="https://github.com/UW-GAC/analysis_pipeline/tree/master/TopmedPipeline">TopmedPipeline</a></li>
+<li><a href="https://www.tidyverse.org">tidyverse</a></li>
+<li><a href="https://cran.r-project.org/web/packages/GGally">GGally</a></li>
+</ul>
+</div>
+<div id="resources" class="section level2" number="1.3">
+<h2><span class="header-section-number">1.3</span> Resources</h2>
+<p>NHLBI BioData Catalyst Powered by Seven Bridges</p>
+<ul>
+<li><a href="https://drive.google.com/file/d/1LMlzot2GXPKCRmLH6BtsOi9PxKAoohYT/view?usp=sharing">Getting Started Guide for SISG21 Module 16</a></li>
+</ul>
+<p>If you are new to R, you might find the following material helpful:</p>
+<ul>
+<li><a href="http://faculty.washington.edu/kenrice/rintro/indexSEA15.shtml">Introduction to R</a> materials from SISG Module 3</li>
+<li>Graphics with <a href="https://ggplot2.tidyverse.org/">ggplot2</a></li>
+<li>Data manipulation with <a href="http://dplyr.tidyverse.org/">dplyr</a></li>
+</ul>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+
+<a href="gds-format.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>
