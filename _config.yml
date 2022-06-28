@@ -1,3 +1,9 @@
 theme: jekyll-theme-slate
-title: SISG Module 17 Computational Pipeline for WGS Data, July 27-29, 2022
+
+# Name of website
+title: SISG Module 17 \newline Computational Pipeline for WGS Data, July 27-29, 2022
+
 description: stuff
+
+# name to show in footer
+author: Matthew P. Conomos
