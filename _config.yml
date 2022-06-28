@@ -1,4 +1,5 @@
 #theme: jekyll-theme-slate
+markdown: kramdown
 
 title: SISG Module 17 | Computational Pipeline for WGS Data
     
