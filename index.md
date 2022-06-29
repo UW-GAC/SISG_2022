@@ -10,9 +10,9 @@ This site contains course materials for SISG Module 17: Computational Pipeline f
 Course material will be presented through lectures given via Zoom. Slides for lectures are linked in the schedule below, and recordings of the lectures will be posted afterwards.
 
 #### Exercises 
-Many of the lectures will be followed with hands-on exercises. Students will be split into Zoom breakout rooms where they can work through the exercises together. 
+Many of the lectures will be followed with hands-on exercises. Students will be split into Zoom breakout rooms where they can work through the exercises together. Afterwards, the instructors will walk through the exercises and lead a discussion. 
 
-To work through the exercises, log into [NHLBI BioData Catalyst powered by Seven Bridges](https://platform.sb.biodatacatalyst.nhlbi.nih.gov) with your username and password -- we will use this platform for all live demonstrations during the course.
+To run the exercises, log into [NHLBI BioData Catalyst powered by Seven Bridges](https://platform.sb.biodatacatalyst.nhlbi.nih.gov) with your username and password -- we will use this platform for all live demonstrations during the course.
 
 All of the R code and data can also be downloaded from the [github repository](https://github.com/UW-GAC/SISG_2022) from which the site is built and run on your local machine. Download the complete workshop data and exercises: https://github.com/UW-GAC/SISG_2022/archive/master.zip
 
@@ -83,43 +83,3 @@ If you are new to R, you might find the following material helpful:
 - [Introduction to R](http://faculty.washington.edu/kenrice/rintro/indexSEA15.shtml) materials from SISG Module 3
 - Graphics with [ggplot2](https://ggplot2.tidyverse.org/)
 - Data manipulation with [dplyr](http://dplyr.tidyverse.org/)
-
-
-
-
-
-
-
-
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/UW-GAC/SISG_2022/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
