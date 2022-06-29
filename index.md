@@ -1,24 +1,20 @@
-## Introduction
-
 This site contains course materials for SISG Module 17: Computational Pipeline for WGS Data, July 27-29, 2022. The official SISG web page can be found [here]() (requires login) -- **course evaluations and certificates of completion will be available via this page.**
 
-**Lectures**
+- **Instructors:** Ken Rice, Laura Raffield, and Matthew Conomos
+- **Zoom Link:** []
+- **Slack Discussion:** []
 
-Slides for lectures are linked below in the schedule. All lectures will be given via Zoom, and recordings of lectures will be posted afterwards.
+## Course Format
 
-**Zoom** 
+#### Lectures
+Course material will be presented through lectures given via Zoom. Slides for lectures are linked in the schedule below, and recordings of the lectures will be posted afterwards.
 
-Link for lectures: 
+#### Exercises 
+Many of the lectures will be followed with hands-on exercises. Students will be split into Zoom breakout rooms where they can work through the exercises together. 
 
-**Tutorials and Exercises**
+To work through the exercises, log into [NHLBI BioData Catalyst powered by Seven Bridges](https://platform.sb.biodatacatalyst.nhlbi.nih.gov) with your username and password -- we will use this platform for all live demonstrations during the course.
 
-To work through the tutorials and exercises, log into [NHLBI BioData Catalyst powered by Seven Bridges](https://platform.sb.biodatacatalyst.nhlbi.nih.gov) with your username and password -- we will use this platform for all live demonstrations during the course.
-
-All of the R code and data can also be downloaded from the [github repository](https://github.com/UW-GAC/SISG_2022) from which the site is built and run on your local machine after the course has ended. Download the workshop data and exercises: https://github.com/UW-GAC/SISG_2022/archive/master.zip
-
-**Slack**
-
-Join the Slack channel here: https://uwbiostatisticssisg.slack.com
+All of the R code and data can also be downloaded from the [github repository](https://github.com/UW-GAC/SISG_2022) from which the site is built and run on your local machine. Download the complete workshop data and exercises: https://github.com/UW-GAC/SISG_2022/archive/master.zip
 
 
 ## Schedule
