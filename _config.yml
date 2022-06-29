@@ -1,7 +1,11 @@
-theme: jekyll-theme-slate
+theme: jekyll-theme-minimal
 
 title: SISG Module 17 | Computational Pipeline for WGS Data
     
 description: July 27-29, 2022
 
 show_downloads: true
+
+accent_image:
+  background: '#202020' # provide a valid CSS background value
+  overlay:    false     # set to true if you want a dark overlay
