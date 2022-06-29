@@ -9,3 +9,5 @@ show_downloads: true
 accent_image:
   background: '#202020' # provide a valid CSS background value
   overlay:    false     # set to true if you want a dark overlay
+
+theme: jekyll-theme-cayman
