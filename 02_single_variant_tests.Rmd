@@ -128,9 +128,9 @@ ggplot(nullmod$fit, aes(x = fitted.values, y = resid.marginal)) +
     geom_smooth(method = 'lm')
 ```
 
-## Exercise
+### Exercise 2.1 (Data Studio)
 
-1. **(Data Studio)** As discussed in the lecture, we recommend a fully adjusted two-stage inverse Normalization procedure for fitting the null model when phenotypes have non-Normal distributions. Using the `two.stage` option in `fitNullModel`, fit a two-stage null model. Compare these residuals with the residuals from the original null model.
+As discussed in the lecture, we recommend a fully adjusted two-stage inverse Normalization procedure for fitting the null model when phenotypes have non-Normal distributions. Using the `two.stage` option in `fitNullModel`, fit a two-stage null model. Compare these residuals with the residuals from the original null model.
 
 ```{r}
 # your solution here 
@@ -145,9 +145,9 @@ ggplot(nullmod$fit, aes(x = fitted.values, y = resid.marginal)) +
 #
 ```
 
-## Solution
+### Solution 2.1 (Data Studio)
 
-1. **(Data Studio)** As discussed in the lecture, we recommend a fully adjusted two-stage inverse Normalization procedure for fitting the null model when phenotypes have non-Normal distributions. Using the `two.stage` option in `fitNullModel`, fit a two-stage null model. Compare these residuals with the residuals from the original null model.
+As discussed in the lecture, we recommend a fully adjusted two-stage inverse Normalization procedure for fitting the null model when phenotypes have non-Normal distributions. Using the `two.stage` option in `fitNullModel`, fit a two-stage null model. Compare these residuals with the residuals from the original null model.
 
 To run the fully adjusted two.stage null model, we simply set the `two.stage` option to `TRUE`. The `norm.option` parameter determines if the inverse Normalization should be done with all samples together (`"all"`) or within each `group.var` group separately (`"by.group"`).
 
@@ -265,9 +265,9 @@ qqPlot(assoc$Score.pval[assoc$MAC >= 5])
 
 We should expect the majority of variants to fall near the red `y=x` line in the QQ plot. The deviation above the line, commonly referred to as "inflation" is indicative of some model issue. In this example, the issue is likely driven by the fact that we've ignored genetic ancestry and relatedness among these subjects -- more to come later when we discuss mixed models.
 
-## Exercise
+### Exercise 2.2 (Data Studio)
 
-2. **(Data Studio)** GENESIS also supports testing binary (e.g. case/control) outcomes. We can fit a null model using logistic regression by specifying the argument `family=binomial` in the `fitNullModel` function. Use the `status` column in the sample annotation to fit a null model for simulated case/control status, with `sex` and `pop` as covariates. Run single-variant association tests using this model and make a QQ plot of all variants with MAC >= 5.
+GENESIS also supports testing binary (e.g. case/control) outcomes. We can fit a null model using logistic regression by specifying the argument `family=binomial` in the `fitNullModel` function. Use the `status` column in the sample annotation to fit a null model for simulated case/control status, with `sex` and `pop` as covariates. Run single-variant association tests using this model and make a QQ plot of all variants with MAC >= 5.
 
 ```{r}
 # your solution here 
@@ -282,9 +282,9 @@ We should expect the majority of variants to fall near the red `y=x` line in the
 #
 ```
 
-## Solution
+### Solution 2.2 (Data Studio)
 
-2. **(Data Studio)** GENESIS also supports testing binary (e.g. case/control) outcomes. We can fit a null model using logistic regression by specifying the argument `family=binomial` in the `fitNullModel` function. Use the `status` column in the sample annotation to fit a null model for simulated case/control status, with `sex` and `pop` as covariates. Run single-variant association tests using this model and make a QQ plot of all variants with MAC >= 5.
+GENESIS also supports testing binary (e.g. case/control) outcomes. We can fit a null model using logistic regression by specifying the argument `family=binomial` in the `fitNullModel` function. Use the `status` column in the sample annotation to fit a null model for simulated case/control status, with `sex` and `pop` as covariates. Run single-variant association tests using this model and make a QQ plot of all variants with MAC >= 5.
 
 When testing binary outcomes, we should fit our null model using logistic regression. To do so, we simply set the argument `family=binomial` in `fitNullModel`. Note that the parameter `group.var` is no longer relevant here, as the logistic model specifies the mean-variance relationship.
 

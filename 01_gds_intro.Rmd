@@ -1,6 +1,6 @@
 # Introduction to GDS Format
 
-Genomic Data Structure (GDS) is a storage format that can efficiently store genomic data and provide fast random access to subsets of the data. For more information on GDS for sequence data, see the [SeqArray package vignette](https://github.com/zhengxwen/SeqArray/blob/master/vignettes/SeqArrayTutorial.Rmd).
+This tutorial introduces Genomic Data Structure (GDS), which is a storage format that can efficiently store genomic data and provide fast random access to subsets of the data. For more information on GDS for sequence data, see the [SeqArray package vignette](https://github.com/zhengxwen/SeqArray/blob/master/vignettes/SeqArrayTutorial.Rmd).
 
 ## Convert a VCF to GDS
 
@@ -19,7 +19,7 @@ seqVCF2GDS(vcffile, gdsfile, fmt.import="GT", storage.option="LZMA_RA")
 
 ## Exploring a GDS File
 
-### Open a GDS
+#### Open a GDS
 
 We can interact with the GDS file using the [SeqArray R package](https://bioconductor.org/packages/release/bioc/html/SeqArray.html). The first thing we need to do is open a connection to a GDS file on disk using the `seqOpen` function. 
 
@@ -29,7 +29,7 @@ gds <- seqOpen(gdsfile)
 gds
 ```
 
-### Reading Data
+#### Reading Data
 
 The `seqGetData` function is the basic function for reading in data from a GDS file
 ```{r seqGetData}
@@ -63,7 +63,7 @@ summary(maf)
 hist(maf, breaks=50)
 ```
 
-### Data Filters
+#### Data Filters
 
 We can define a filter on the `gds` object. After using the `seqSetFilter` command, all subsequent reads from the `gds` object are restricted to the selected subset of data, until a new filter is defined or `seqResetFilter` is called.
 
@@ -76,7 +76,7 @@ seqSetFilter(gds, variant.id=91:100, sample.id=sample.id[1:5])
 seqGetData(gds, "variant.id")
 ```
 
-### Genotype Data
+#### Genotype Data
 
 Genotype data is stored in a 3-dimensional array, where the first dimension is always length 2 for diploid genotypes. The second and third dimensions are samples and variants, respectively. The values of the array denote alleles: `0` is the reference allele and `1` is the alternate allele. For multiallelic variants, other alternate alleles are represented as integers `> 1`.
 
@@ -99,7 +99,7 @@ refDosage(gds)
 altDosage(gds)
 ```
 
-### Variant Information 
+#### Variant Information 
 
 There are functions to extract variant information. 
 
@@ -122,7 +122,7 @@ gr <- granges(gds)
 gr
 ```
 
-### Multi-allelic Variants
+#### Multi-allelic Variants
 
 We can use the number of alleles present at each variant to identify multi-allelic variants.
 
@@ -142,7 +142,7 @@ altChar(gds, n=1)[multi.allelic]
 altChar(gds, n=2)[multi.allelic]
 ```
 
-### Close a GDS
+#### Close a GDS
 
 Always use the `seqClose` command to close your connection to a GDS file when you are done working with it. Trying to open an already opened GDS will result in an error. 
 
@@ -151,9 +151,9 @@ seqClose(gds)
 ```
 
 
-## Exercises 
+### Exercise 1.1 (Data Studio)
 
-1. **(Data Studio)** Set a filter selecting only multi-allelic variants. Inspect their genotypes using the different methods you learned above. Use the `alleleDosage` method to find dosage for the second (and third, etc.) alternate allele.
+Set a filter selecting only multi-allelic variants. Inspect their genotypes using the different methods you learned above. Use the `alleleDosage` method to find dosage for the second (and third, etc.) alternate allele.
 
 ```{r}
 # your solution here 
@@ -168,19 +168,9 @@ seqClose(gds)
 #
 ```
 
-2. **(Application)** The Apps on the BioData Catalyst powered by Seven Bridges platform allow you to easily scale up cloud computing to running analyses on all chromosomes genome-wide and with larger samples. Use the `VCF to GDS Converter` app to convert the example 1000 Genomes files into GDS files. Below are the inputs and settings to use for this analysis:
+### Solution 1.1 (Data Studio)
 
-- Inputs
-  - Variants Files: `1KG_phase3_subset_chr<CHR>.vcf.gz` (select all 22 chromosomes)
-- App Settings
-  - check GDS: No
-  
-  The analysis will take a few minutes to run. You can find your analysis in the Tasks menu of your Project to check on its progress and see the results once it has completed.
-
-
-## Solutions
-
-1. **(Data Studio)** Set a filter selecting only multi-allelic variants. Inspect their genotypes using the different methods you learned above. Use the `alleleDosage` method to find dosage for the second (and third, etc.) alternate allele.
+Set a filter selecting only multi-allelic variants. Inspect their genotypes using the different methods you learned above. Use the `alleleDosage` method to find dosage for the second (and third, etc.) alternate allele.
 
 ```{r exercise_gds}
 # open a connection to the GDS file again
@@ -229,7 +219,20 @@ Don't forget to close your connection to the GDS file when you're done!
 seqClose(gds)
 ```
 
-2. **(Application)** Use the `VCF to GDS Converter` app to convert the example 1000 Genomes files into GDS files.
+### Exercise 1.2 (Application)
+
+The Apps on the BioData Catalyst powered by Seven Bridges platform allow you to easily scale up cloud computing to running analyses on all chromosomes genome-wide and with larger samples. Use the `VCF to GDS Converter` app to convert the example 1000 Genomes files into GDS files. Below are the inputs and settings to use for this analysis:
+
+- Inputs
+  - Variants Files: `1KG_phase3_subset_chr<CHR>.vcf.gz` (select all 22 chromosomes)
+- App Settings
+  - check GDS: No
+  
+The analysis will take a few minutes to run. You can find your analysis in the Tasks menu of your Project to check on its progress and see the results once it has completed.
+
+### Solution 1.2 (Application)
+
+Use the `VCF to GDS Converter` app to convert the example 1000 Genomes files into GDS files.
   
 The steps to perform this analysis are as follows:
 
