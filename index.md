@@ -3,7 +3,7 @@ This site contains course materials for SISG Module 17: Computational Pipeline f
 - **Instructors:** Ken Rice, Laura Raffield, and Matthew Conomos
 - **TAs:** Deepti Jain and Anya Mikhaylova
 - **Zoom Link:** []
-- **Slack Discussion:** []
+- **Slack Discussion:** [https://app.slack.com/client/T015W8GL1CM/C03KLGG4XRV]
 
 ## Course Format
 
