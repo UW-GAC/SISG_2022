@@ -1,6 +1,7 @@
 This site contains course materials for SISG Module 17: Computational Pipeline for WGS Data, July 27-29, 2022. **Course evaluations and certificates of completion will be available via the [official SISG course web page](https://si.biostat.washington.edu/courses/SM2217)** (requires login). 
 
 - **Instructors:** Ken Rice, Laura Raffield, and Matthew Conomos
+- **TAs:** Deepti Jain and Anya Mikhaylova
 - **Zoom Link:** []
 - **Slack Discussion:** []
 
@@ -40,8 +41,8 @@ NOTE: All times are Pacific Daylight Time (GMT-07:00)
 | 9:45am-10:15am | _Break_ | | | 
 | 10:15am-11:45am | Population Structure and Relatedness Inference | [Slides](), [Recording]() | [Markdown](), [R code](), [Recording]() |
 | 11:45am-12:45pm | _Lunch_ | | | 
-| 12:45pm-2:15pm | Mixed Model Association Testing | [Slides](), [Recording]() | [Markdown](), [R code](), [Recording]() |
-| 2:15pm-2:30pm | Null Model Explorer Demo | [Slides](), [Recording]() | |
+| 12:45pm-2:00pm | Mixed Model Association Testing | [Slides](), [Recording]() | [Markdown](), [R code](), [Recording]() |
+| 2:00pm-2:30pm | R shiny Apps for Exploring Results | [Slides](), [Recording]() | |
 
 **Friday, July 29th**
 
