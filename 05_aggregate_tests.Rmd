@@ -1,0 +1,150 @@
+# Aggregate Association Tests
+
+Multiple-variant association tests, which are commonly used for testing rare variants in aggregate, can be used to identify when variants in a genomic region (e.g. a gene), potentially with certain properties defined by variant annotation, are associated with a phenotype of interest. Under certain assumptions, these aggregate tests can improve statistical power to detect association when single variant tests are under-powered and/or poorly calibrated. This tutorial demonstrates how to perform aggregate multiple-variant association tests using the [GENESIS](https://bioconductor.org/packages/release/bioc/html/GENESIS.html) R/Bioconductor package. 
+
+## Aggregate unit for association testing exercise
+
+Now that we know how to make genome annotation informed aggregation  units using Annotation Explorer, such as the gene-based variant aggregation units, we can proceed to an association testing exercise. *NOTE : The exercises in this workshop are based on the 1000 genomes dataset mapped to genome build GRCh37/hg19. Because the aggregation  units we generated using the Annotation Explorer in the previous section are mapped to GRCh38 and are not based on 1000 genomes data, we will **not** be using them in this section*. Instead, in this exercise we will be using pre-computed aggregation  units based on 1000 genomes mapped to GRCh37 so that the annotation positions are consistent with the build used for genotyping data in the workshop. These gene-based units include SNVs from all chromosomes (no indels, and not just chromosome 1 as before). Each genic unit was specified to include the set of SNVs falling within a GENCODE-defined gene boundaries and the 20 kb flanking regions upstream and downstream of that range. This set of aggregation units is not filtered by CADD score or consequence.
+
+The aggregation units are defined in an R dataframe in the format consistent with the output from Annotation Explorer and compatible with the GENESIS association testing workflows. Each row of the dataframe specifies a variant (chr, pos, ref, alt) and the group identifier (group_id) it is a part of. Multiple rows with different group identifiers can be specified to assign a variant to different groups (i.e., a variant can be assigned to multiple genes).
+
+Begin by loading the aggregation units:
+
+```{r agg_unit}
+library(dplyr)
+repo_path <- "https://github.com/UW-GAC/SISG_2021/raw/master"
+if (!dir.exists("data")) dir.create("data")
+aggfile <- "data/variants_by_gene.RData"
+if (!file.exists(aggfile)) download.file(file.path(repo_path, aggfile), aggfile)
+aggunit <- get(load(aggfile))
+head(aggunit)
+```
+
+```{r}
+# an example of a variant that is present in multiple groups
+mult <- aggunit %>%
+    group_by(chr, pos) %>%
+    summarise(n=n()) %>%
+    filter(n > 1)
+inner_join(aggunit, mult[2,1:2])
+```
+
+## Association testing with aggregate units
+
+We can run burden and SKAT tests on each of these units using the same `assocTestAggregate` function we used previously. We define a `SeqVarListIterator` object where each list element is an aggregate unit. The constructor expects a `GRangesList`, so we use the TopmedPipeline function `aggregateGRangesList` to quickly convert our single dataframe to the required format. This function can account for multiallelic variants (the same chromosome, position, and ref, but different alt alleles).
+
+```{r aggVarList}
+# open the GDS file
+library(SeqVarTools)
+gdsfile <- "data/1KG_phase3_subset_chr1.gds"
+if (!file.exists(gdsfile)) download.file(file.path(repo_path, gdsfile), gdsfile)
+gdsfmt::showfile.gds(closeall=TRUE) # make sure file is not already open
+gds <- seqOpen(gdsfile)
+
+# sample annotation file
+annotfile <- "data/sample_phenotype_pcs.RData"
+if (!file.exists(annotfile)) download.file(file.path(repo_path, annotfile), aggfile)
+annot <- get(load(annotfile))
+
+# make the seqVarData object
+seqData <- SeqVarData(gds, sampleData=annot)
+
+# subset to chromosome 1
+aggunit1 <- filter(aggunit, chr == 1)
+
+# create the GRangesList object
+library(TopmedPipeline)
+aggVarList <- aggregateGRangesList(aggunit1)
+length(aggVarList)
+head(names(aggVarList))
+aggVarList[[1]]
+
+# construct the iterator using the SeqVarListIterator function
+iterator <- SeqVarListIterator(seqData, variantRanges=aggVarList, verbose=FALSE)
+```
+
+As in the previous section, we must load the null model we fit earlier before running the association test.
+
+```{r assoc_aggregate}
+# load the null model
+nullmodfile <- "data/null_mixed_model.RData"
+if (!file.exists(nullmodfile)) download.file(file.path(repo_path, nullmodfile), nullmodfile)
+nullmod <- get(load(nullmodfile))
+
+# run the burden test
+library(GENESIS)
+assoc <- assocTestAggregate(iterator, nullmod, test="Burden", AF.max=0.1, weight.beta=c(1,1))
+names(assoc)
+head(assoc$results)
+head(names(assoc$variantInfo))
+assoc$variantInfo[[3]]
+```
+
+We can make our usual QQ plot 
+
+```{r}
+library(ggplot2)
+qqPlot <- function(pval) {
+    pval <- pval[!is.na(pval)]
+    n <- length(pval)
+    x <- 1:n
+    dat <- data.frame(obs=sort(pval),
+                      exp=x/n,
+                      upper=qbeta(0.025, x, rev(x)),
+                      lower=qbeta(0.975, x, rev(x)))
+    
+    ggplot(dat, aes(-log10(exp), -log10(obs))) +
+        geom_line(aes(-log10(exp), -log10(upper)), color="gray") +
+        geom_line(aes(-log10(exp), -log10(lower)), color="gray") +
+        geom_point() +
+        geom_abline(intercept=0, slope=1, color="red") +
+        xlab(expression(paste(-log[10], "(expected P)"))) +
+        ylab(expression(paste(-log[10], "(observed P)"))) +
+        theme_bw()
+}    
+
+qqPlot(assoc$results$Score.pval)
+```
+
+## Exercise
+
+1. Since we are working with a subset of the data, many of the genes listed in `group_id` have a very small number of variants. Create a new set of aggregation units based on position, rather than gene name -- create 10 units that are 1MB long and span all of the chr1 variants by using the TopmedPipeline function `aggregateGRanges`. Run a SKAT test using those units and a `SeqVarRangeIterator` object.
+
+## Solution
+
+1. Since we are working with a subset of the data, many of the genes listed in `group_id` have a very small number of variants. Create a new set of aggregation units based on position, rather than gene name -- create 10 units that are 1MB long and span all of the chr1 variants by using the TopmedPipeline function `aggregateGRanges`. Run a SKAT test with the Wu weights using those units and a `SeqVarRangeIterator` object.
+
+```{r exercise_aggregate}
+# minimum variant position
+minp <- min(aggunit1$pos)
+# maximum variant position
+maxp <- max(aggunit1$pos)
+
+# create a data frame breaking the position range into 10 pieces
+aggByPos <- data.frame(chr=1,
+                       start=seq(minp, maxp-1e6, length.out=10),
+                       end=seq(minp+1e6, maxp, length.out=10))
+aggByPos$group_id <- 1:nrow(aggByPos)
+dim(aggByPos)
+head(aggByPos)
+```
+
+```{r}
+aggVarList <- aggregateGRanges(aggByPos)
+aggVarList
+```
+
+```{r}
+seqResetFilter(seqData, verbose=FALSE)
+iterator <- SeqVarRangeIterator(seqData, variantRanges=aggVarList, verbose=FALSE)
+assoc <- assocTestAggregate(iterator, 
+                            nullmod, 
+                            test="SKAT", 
+                            AF.max=0.1, 
+                            weight.beta=c(1,25))
+assoc$results
+```
+
+```{r annot_close}
+seqClose(seqData)
+```

@@ -87,7 +87,7 @@ save(annot, file = "data/sample_phenotype_annotation.RData")
 
 ## Null Model
 
-Now that our data is prepared, we can move on to the association testing procedure. The first step is to fit the "null model" -- i.e., a model fit under the null hypothesis of no individual variant association. Operationally, this is fitting a regression model with the desired outcome phenotype and fixed effect covariates (and random effects -- to be discussed later when we get to mixed models).
+Now that our data is prepared, we can move on to the association testing procedure. The first step is to fit the "null model" -- i.e., a model fit under the null hypothesis of no individual variant association. Operationally, this is fitting a regression model with the desired outcome phenotype and fixed effect covariates.
 
 #### Fit the Null Model
 
@@ -192,7 +192,7 @@ There is not much difference in the residual here because the distribution of he
 
 $$\\[0.5in]$$
 
-## Single-variant association tests
+## Single-Variant Association Tests
 
 After fitting the null model, we use score tests to test each variant across the genome separately for association with the outcome phenotype (i.e. height in our example). We use the `assocTestSingle` function from GENESIS. 
 

@@ -231,8 +231,6 @@ The Apps on the BioData Catalyst powered by Seven Bridges platform allow you to 
 The analysis will take a few minutes to run. You can find your analysis in the Tasks menu of your Project to check on its progress and see the results once it has completed.
 
 ### Solution 1.2 (Application)
-
-Use the `VCF to GDS Converter` app to convert the example 1000 Genomes files into GDS files.
   
 The steps to perform this analysis are as follows:
 
@@ -248,4 +246,4 @@ The steps to perform this analysis are as follows:
     - check GDS: No
   - Click: Run
 
-The analysis will take a few minutes to run. You can find your analysis in the Tasks menu of your Project to check on its progress and see the results once it has completed. You can find the expected output of this analysis by looking at the existing task `1. Convert 1KG VCF to GDS` in the Tasks menu of your Project.
+You can find the expected output of this analysis by looking at the existing task `1. Convert 1KG VCF to GDS` in the Tasks menu of your Project.

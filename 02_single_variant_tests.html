@@ -517,8 +517,7 @@ annot</code></pre>
 testing procedure. The first step is to fit the “null model” – i.e., a
 model fit under the null hypothesis of no individual variant
 association. Operationally, this is fitting a regression model with the
-desired outcome phenotype and fixed effect covariates (and random
-effects – to be discussed later when we get to mixed models).</p>
+desired outcome phenotype and fixed effect covariates.</p>
 <div id="fit-the-null-model" class="section level4">
 <h4>Fit the Null Model</h4>
 <p>We use the <code>fitNullModel</code> function from GENESIS. We need
@@ -686,7 +685,7 @@ al.</a> for more information on the fully adjusted two-stage model.</p>
 </div>
 </div>
 <div id="single-variant-association-tests-1" class="section level2">
-<h2>Single-variant association tests</h2>
+<h2>Single-Variant Association Tests</h2>
 <p>After fitting the null model, we use score tests to test each variant
 across the genome separately for association with the outcome phenotype
 (i.e. height in our example). We use the <code>assocTestSingle</code>
