@@ -2,7 +2,7 @@ This site contains course materials for SISG Module 17: Computational Pipeline f
 
 - **Instructors:** Ken Rice, Laura Raffield, and Matthew Conomos
 - **TAs:** Deepti Jain and Anya Mikhaylova
-- **Zoom Link:** []
+- **Zoom Link:** [https://washington.zoom.us/j/91863603677]
 - **Slack Discussion:** [https://app.slack.com/client/T015W8GL1CM/C03KLGG4XRV]
 
 ## Course Format
@@ -48,14 +48,13 @@ NOTE: All times are Pacific Daylight Time (GMT-07:00)
 
 | Time | Topic | Lecture | Exercises/Discussion |
 | --- | --- | --- | --- |
-| 8:00am-8:55am | Association Tests Part III: Multiple Variant Tests | [Slides](), [Recording]() | |
-| 8:55am-10:00am | Variant Annotation for Aggregate Association Testing | [Slides](), [Recording]() | [Markdown](), [R code](), [Recording]() |
+| 8:00am-9:00am | Association Tests Part III: Multiple Variant Tests | [Slides](), [Recording]() | |
+| 9:00am-10:00am | Variant Annotation for Aggregate Association Testing | [Slides](), [Recording]() | [Markdown](), [R code](), [Recording]() |
 | 10:00am-10:30am | _Break_ | | | 
-| 10:30am-11:15am | Annotation Explorer Demo | [Slides](), [Recording]() | [Markdown](), [R code](), [Recording]() |
-| 11:15am-12:00pm | Advanced Annotation Strategies for Association Testing | [Slides](), [Recording]() | [Markdown](), [R code](), [Recording]() |
+| 10:30am-11:15am | Annotation Explorer Demo | [Slides](), [Recording]() |  |
+| 11:15am-12:00pm | Advanced Annotation Strategies for Association Testing | [Slides](), [Recording]() |  |
 | 12:00pm-1:00pm | _Lunch_ | | |
-| 1:00pm-1:15pm | ??? | [Slides](), [Recording]() | [Markdown](), [R code](), [Recording]() |
-| 1:15pm-2:00pm | Recent Findings from Sequencing Studies | [Slides](), [Recording]() | [Markdown](), [R code](), [Recording]() |
+| 1:00pm-2:00pm | Recent Findings from Sequencing Studies | [Slides](), [Recording]() |  |
 | 2:00pm-2:30pm | Open Q&A | | [Recording]() |
 
 
