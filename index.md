@@ -1,4 +1,4 @@
-This site contains course materials for SISG Module 17: Computational Pipeline for WGS Data, July 27-29, 2022. The official SISG web page can be found [here]() (requires login) -- **course evaluations and certificates of completion will be available via this page.**
+This site contains course materials for SISG Module 17: Computational Pipeline for WGS Data, July 27-29, 2022. **Course evaluations and certificates of completion will be available via the [official SISG course web page](https://si.biostat.washington.edu/courses/SM2217)** (requires login). 
 
 - **Instructors:** Ken Rice, Laura Raffield, and Matthew Conomos
 - **Zoom Link:** []
@@ -26,37 +26,34 @@ NOTE: All times are Pacific Daylight Time (GMT-07:00)
 | Time | Topic | Lecture | Exercises/Discussion |
 | --- | --- | --- | --- |
 | 11:30am-11:40am | Introduction | [Slides](), [Recording]() | |
-| 11:40am-12:00pm | Using BioData Catalyst in this Module (?) | [Slides](), [Recording]() | |
-| 12:00pm-1:00pm | Intro to Genomic Data Structure (?) | [Slides](), [Recording]() | [Markdown](), [R code](), [Recording]() |
-| 1:00pm-1:30pm | _Break_ | | | 
-| 1:30pm-1:50pm | Cloud computing intro (?) | [Slides](), [Recording]() | [Markdown](), [R code](), [Recording]() |
-| 1:50pm-2:30pm | Association Tests Part I: Background | [Slides](), [Recording]() | |
+| 11:40am-12:30pm | Using BioData Catalyst powered by Seven Bridges | [Slides](), [Recording]() | |
+| 12:30pm-1:30pm | Intro to Genomic Data Structure | [Slides](), [Recording]() | [Markdown](), [R code](), [Recording]() |
+| 1:30pm-1:45pm | _Break_ | | | 
+| 1:45pm-2:30pm | Association Tests Part I: Background | [Slides](), [Recording]() | |
 
 **Thursday, July 28th**
 
 | Time | Topic | Lecture | Exercises/Discussion |
 | --- | --- | --- | --- |
 | 8:00am-8:50am | Association Tests Part II: Single Variant Tests | [Slides](), [Recording]() | |
-| 8:50am-9:45am | GENESIS for Association Tests | [Slides](), [Recording]() | [Markdown](), [R code](), [Recording]() |
-| 9:45am-10:00am | _Break_ | | | 
-| 10:00am-11:00am | Population Structure and Relatedness Inference | [Slides](), [Recording]() | [Markdown](), [R code](), [Recording]() |
-| 11:00am-12:00pm | _Lunch_ | | | 
-| 12:00pm-1:15pm | Mixed Model Association Testing | [Slides](), [Recording]() | [Markdown](), [R code](), [Recording]() |
-| 1:15pm-1:30pm | _Break_ | | |
-| 1:30pm-2:30pm | Null model explorer? locus zoom app? plotting app? | [Slides](), [Recording]() | [Markdown](), [R code](), [Recording]() |
+| 8:50am-9:45am | GENESIS for Single Variant Association Tests | [Slides](), [Recording]() | [Markdown](), [R code](), [Recording]() |
+| 9:45am-10:15am | _Break_ | | | 
+| 10:15am-11:45am | Population Structure and Relatedness Inference | [Slides](), [Recording]() | [Markdown](), [R code](), [Recording]() |
+| 11:45am-12:45pm | _Lunch_ | | | 
+| 12:45pm-2:15pm | Mixed Model Association Testing | [Slides](), [Recording]() | [Markdown](), [R code](), [Recording]() |
+| 2:15pm-2:30pm | Null Model Explorer Demo | [Slides](), [Recording]() | |
 
 **Friday, July 29th**
 
 | Time | Topic | Lecture | Exercises/Discussion |
 | --- | --- | --- | --- |
-| 8:00am-8:45am | Association Tests Part III: Multiple Variant Tests | [Slides](), [Recording]() | |
-| 8:45am-9:45am | Variant Annotation for Association Testing | [Slides](), [Recording]() | [Markdown](), [R code](), [Recording]() |
-| 9:45am-10:00am | _Break_ | | | 
-| 10:00am-11:00am | Annotation Explorer | [Slides](), [Recording]() | [Markdown](), [R code](), [Recording]() |
-| 11:00am-11:30am | Advanced Annotation Strategies for Association Testing | [Slides](), [Recording]() | [Markdown](), [R code](), [Recording]() |
-| 11:30am-12:30pm | _Lunch_ | | |
-| 12:30pm-1:00pm | ??? | [Slides](), [Recording]() | [Markdown](), [R code](), [Recording]() |
-| 1:00pm-1:15pm | _Break_ | | |
+| 8:00am-8:55am | Association Tests Part III: Multiple Variant Tests | [Slides](), [Recording]() | |
+| 8:55am-10:00am | Variant Annotation for Aggregate Association Testing | [Slides](), [Recording]() | [Markdown](), [R code](), [Recording]() |
+| 10:00am-10:30am | _Break_ | | | 
+| 10:30am-11:15am | Annotation Explorer Demo | [Slides](), [Recording]() | [Markdown](), [R code](), [Recording]() |
+| 11:15am-12:00pm | Advanced Annotation Strategies for Association Testing | [Slides](), [Recording]() | [Markdown](), [R code](), [Recording]() |
+| 12:00pm-1:00pm | _Lunch_ | | |
+| 1:00pm-1:15pm | ??? | [Slides](), [Recording]() | [Markdown](), [R code](), [Recording]() |
 | 1:15pm-2:00pm | Recent Findings from Sequencing Studies | [Slides](), [Recording]() | [Markdown](), [R code](), [Recording]() |
 | 2:00pm-2:30pm | Open Q&A | | [Recording]() |
 
