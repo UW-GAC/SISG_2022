@@ -366,7 +366,7 @@ pre code {
 
 
 <div id="introduction-to-gds-format" class="section level1">
-<h1>Introduction to GDS Format</h1>
+<h1>1. Introduction to GDS Format</h1>
 <p>This tutorial introduces Genomic Data Structure (GDS), which is a
 storage format that can efficiently store genomic data and provide fast
 random access to subsets of the data. For more information on GDS for
@@ -379,14 +379,14 @@ Genetic Analysis Center for sequence data, we first need to convert a
 VCF file to GDS. (If the file is BCF, use <a href="bcftools">https://samtools.github.io/bcftools/bcftools.html</a> to
 convert to VCF.)</p>
 <pre class="r"><code>library(SeqArray)
-repo_path &lt;- &quot;https://github.com/UW-GAC/SISG_2022/raw/master&quot;
+repo_path &lt;- &quot;https://github.com/UW-GAC/SISG_2022/raw/main&quot;
 if (!dir.exists(&quot;data&quot;)) dir.create(&quot;data&quot;)
 vcffile &lt;- &quot;data/1KG_phase3_subset_chr1.vcf.gz&quot;
 if (!file.exists(vcffile)) download.file(file.path(repo_path, vcffile), vcffile)
 gdsfile &lt;- &quot;data/1KG_phase3_subset_chr1.gds&quot;
 # convert the VCF to GDS
 seqVCF2GDS(vcffile, gdsfile, fmt.import=&quot;GT&quot;, storage.option=&quot;LZMA_RA&quot;)</code></pre>
-<pre><code>## Thu Jul 14 19:01:08 2022
+<pre><code>## Mon Jul 18 17:09:56 2022
 ## Variant Call Format (VCF) Import:
 ##     file(s):
 ##         1KG_phase3_subset_chr1.vcf.gz (120.7K)
@@ -413,7 +413,7 @@ seqVCF2GDS(vcffile, gdsfile, fmt.import=&quot;GT&quot;, storage.option=&quot;LZM
 ##     annotation/qual  [md5: d6b8ed9bd5cac7dd7898bb679675fc7c]
 ##     annotation/filter  [md5: 8294edaf60fffc1e9aa693b4bc423dd1]
 ## Done.
-## Thu Jul 14 19:01:09 2022
+## Mon Jul 18 17:09:57 2022
 ## Optimize the access efficiency ...
 ## Clean up the fragments of GDS file:
 ##     open the file &#39;data/1KG_phase3_subset_chr1.gds&#39; (71.3K)
@@ -421,7 +421,7 @@ seqVCF2GDS(vcffile, gdsfile, fmt.import=&quot;GT&quot;, storage.option=&quot;LZM
 ##     save to &#39;data/1KG_phase3_subset_chr1.gds.tmp&#39;
 ##     rename &#39;data/1KG_phase3_subset_chr1.gds.tmp&#39; (70.5K, reduced: 744B)
 ##     # of fragments: 61
-## Thu Jul 14 19:01:09 2022</code></pre>
+## Mon Jul 18 17:09:57 2022</code></pre>
 </div>
 <div id="exploring-a-gds-file" class="section level2">
 <h2>Exploring a GDS File</h2>
@@ -893,26 +893,8 @@ done!</p>
 allow you to easily scale up cloud computing to running analyses on all
 chromosomes genome-wide and with larger samples. Use the
 <code>VCF to GDS Converter</code> app to convert the example 1000
-Genomes files into GDS files. Below are the inputs and settings to use
-for this analysis:</p>
-<ul>
-<li>Inputs
-<ul>
-<li>Variants Files: <code>1KG_phase3_subset_chr&lt;CHR&gt;.vcf.gz</code>
-(select all 22 chromosomes)</li>
-</ul></li>
-<li>App Settings
-<ul>
-<li>check GDS: No</li>
-</ul></li>
-</ul>
-<p>The analysis will take a few minutes to run. You can find your
-analysis in the Tasks menu of your Project to check on its progress and
-see the results once it has completed.</p>
-</div>
-<div id="solution-1.2-application" class="section level3">
-<h3>Solution 1.2 (Application)</h3>
-<p>The steps to perform this analysis are as follows:</p>
+Genomes files into GDS files. The steps to perform this analysis are as
+follows:</p>
 <ul>
 <li>Copy the app to your project if it is not already there:
 <ul>
@@ -935,6 +917,10 @@ see the results once it has completed.</p>
 <li>Click: Run</li>
 </ul></li>
 </ul>
+<p>The analysis will take a few minutes to run. You can find your
+analysis in the Tasks menu of your Project. Use the “View stats &amp;
+logs” button to check on the status of your tasks. The output of this
+analysis will be a set of 22 GDS files, one per chromosome.</p>
 <p>You can find the expected output of this analysis by looking at the
 existing task <code>1. Convert 1KG VCF to GDS</code> in the Tasks menu
 of your Project.</p>

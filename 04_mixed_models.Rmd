@@ -1,4 +1,4 @@
-# Mixed Models
+# 4. Mixed Models
 
 This tutorial extends what was previously introduced in the Single Variant Association Tests tutorial from regression models to mixed models that account for genetic relatedness among samples using the [GENESIS](https://bioconductor.org/packages/release/bioc/html/GENESIS.html) R/Bioconductor package. We use the output from the Population Structure and Relatedness Inference tutorial as inputs to our mixed models.
 
@@ -12,7 +12,7 @@ In addition to the phenotype data that we used previously, we will also use the 
 
 ```{r null_model_mm, message = FALSE}
 # sample annotation
-repo_path <- "https://github.com/UW-GAC/SISG_2022/raw/master"
+repo_path <- "https://github.com/UW-GAC/SISG_2022/raw/main"
 if (!dir.exists("data")) dir.create("data")
 sampfile <- "data/sample_phenotype_annotation.RData"
 if (!file.exists(sampfile)) download.file(file.path(repo_path, sampfile), sampfile)
@@ -62,7 +62,9 @@ nullmod <- fitNullModel(annot,
                         cov.mat=kinship, 
                         group.var="study", 
                         verbose=FALSE)
-save(nullmod, file="data/null_mixed_model.RData")
+
+# save the output
+save(nullmod, file="data/null_mixed_model_height.RData")
 ```
 
 We can investigate the output from `fitNullModel`.
@@ -143,6 +145,19 @@ Notice that we observe much less inflation than before, when we did not adjust f
 
 Perform a single-variant association test for `status`. Adjust for sex, age, study, ancestry, and kinship in the model. Don't forget to consider the `family` parameter. Make a QQ plot of the p-values for all variants with MAC >= 5.
 
+```{r}
+# your solution here 
+#
+#
+#
+#
+#
+#
+#
+#
+#
+```
+
 ### Solution 4.1 (Data Studio)
 
 Perform a single-variant association test for `status`. Adjust for sex, age, study, ancestry, and kinship in the model. Don't forget to consider the `family` parameter. Make a QQ plot of the p-values for all variants with MAC >= 5.
@@ -165,6 +180,9 @@ nullmod.status$fixef
 
 # variance component estimates by group.var
 nullmod.status$varComp
+
+# save the output
+save(nullmod.status, file="data/null_mixed_model_status.RData")
 ```
 
 Now that we have the null model, we perform the single-variant association tests and make the QQ plot the same way as before. 
@@ -188,25 +206,7 @@ seqClose(seqData)
 
 ### Exercise 4.2 (Application)
 
-Use the `GENESIS Null Model` app on the BioData Catalyst powered by Seven Bridges platform to fit the a null model for height, adjusting for sex, age, study, ancestry, and kinship in the model, using the example 1000 Genomes data. Below are the inputs and settings to use for this analysis; we use the PCs and kinship matrix we computed using the PC-AiR and PC-Relate apps in the previous tutorial's exercises.
-
-- Inputs
-  - Phenotype file: `sample_phenotype_pcs.RData` 
-  - Relatedness matrix file: `1KG_phase3_subset_pcrelate_Matrix.RData`
-- App Settings
-  - Covariates: sex, age, study, PC1, PC2, PC3, PC4, PC5, PC6 (each as a different element)
-  - Family: gaussian
-  - Group Variate: study
-  - Outcome: height
-  - Two stage model: FALSE
-  
-The analysis will take a few minutes to run. You can find your analysis in the Tasks menu of your Project to check on its progress and see the results once it has completed.
-
-Look at the .html report -- which covariates have significant ($p < 0.05$) associations with height in the null model?
-
-### Solution 4.2 (Application)
-
-The steps to perform this analysis are as follows:
+Use the `GENESIS Null Model` app on the BioData Catalyst powered by Seven Bridges platform to fit the a null model for height, adjusting for sex, age, study, ancestry, and kinship in the model, using the example 1000 Genomes data. We use the PCs and kinship matrix we computed using the PC-AiR and PC-Relate apps in the Population Structure and Relatedness tutorial's exercises as inputs to this analysis. The steps to perform this analysis are as follows:
 
 - Copy the app to your project if it is not already there:
   - Click: Public Gallery > Apps > Browse
@@ -224,33 +224,21 @@ The steps to perform this analysis are as follows:
     - Outcome: height
     - Two stage model: FALSE
   - Click: Run
+  
+The analysis will take a few minutes to run. You can find your analysis in the Tasks menu of your Project to check on its progress and see the results once it has completed.
+
+The output of this analysis will be a `_null_model.RData` file that contains the null model fit, a `_phenotypes.RData` file with the phenotype data used in the analysis, and a `_report.Rmd` and `report.html` with model diagnostics. Review the .html report -- which covariates have significant ($p < 0.05$) associations with height in the null model?
 
 You can find the expected output of this analysis by looking at the existing task `6. 1KG Null Model` in the Tasks menu of your Project. The output files are available in the Project, so you do not need to wait for your analysis to finish to move to the next exercise.
+
+### Solution 4.2 (Application)
 
 From looking at the .html report, we see that sex, study, and PC2 have significant associations with height in our null model.
 
 
 ### Exercise 4.3 (Application)
 
-Use the `GENESIS Single Variant Association Testing` app on the BioData Catalyst powered by Seven Bridges platform to perform a GWAS for height using the null model fit in the previous exercise. Use the genotype data in the genome-wide GDS files you created previously. Below are the inputs and settings to use for this analysis:
-
-- Inputs
-  - GDS Files: `1KG_phase3_subset_chr<CHR>.gds` (select all 22 chromosomes)
-  - Null model file: `1KG_height_null_model.RData`
-  - Phenotype file: `1KG_height_phenotypes.RData` (use the phenotype file created by the Null Model app)
-- App Settings
-  - Genome build: hg19
-  - MAC threshold: 5
-  - memory GB: 32 (increase to make sure enough available)
-  
-The analysis will take a few minutes to run. You can find your analysis in the Tasks menu of your Project to check on its progress and see the results once it has completed.
-
-Look at the QQ plot -- is there evidence of genomic inflation?
-
-
-### Solution 4.3 (Application)
-
-The steps to perform this analysis are as follows:
+Use the `GENESIS Single Variant Association Testing` app on the BioData Catalyst powered by Seven Bridges platform to perform a GWAS for height using the null model fit in the previous exercise. Use the genotype data in the genome-wide GDS files you created previously. The steps to perform this analysis are as follows:
 
 - Copy the app to your project if it is not already there:
   - Click: Public Gallery > Apps > Browse
@@ -268,29 +256,20 @@ The steps to perform this analysis are as follows:
     - memory GB: 32 (increase to make sure enough available)
   - Click: Run
   
+The analysis will take a few minutes to run. You can find your analysis in the Tasks menu of your Project to check on its progress and see the results once it has completed.
+
+The output of this analysis will be 22 `_single_chr<CHR>.RData` files with the association test results for each chromosome as well as a `_single_manh.png` file with the Manhattan plot and a `_single_qq.png` file with the QQ plot. Review the QQ and Manhattan plots -- is there evidence of genomic inflation?
+
 You can find the expected output of this analysis by looking at the existing task `7. 1KG Single Variant Association Test` in the Tasks menu of your Project. The output files are available in the Project, so you do not need to wait for your analysis to finish to move to the next exercise.
+
+### Solution 4.3 (Application)
 
 From looking at the QQ plot, we see that the genomic control lambda = 1.126 and there is deviation from the $y=x$ line -- both indicative of inflation in our analysis. This is likely an artifact of looking at rare variants with a small sample size. 
 
 
 ### Exercise 4.4 (Application)
 
-Use the `GENESIS Association results plotting` app on the BioData Catalyst powered by Seven Bridges platform to make additional QQ plots of the single variant association results binned by MAF: $0-0.5\%$, $0.5-1\%$, $1-5\%$, $\geq 5\%$. Below are the inputs and settings to use for this analysis:
-
-- Inputs
-  - Results from association testing: `1KG_height_single_chr<CHR>.RData` (select all 22 chromosomes)
-- App Settings
-  - Association Type: single
-  - QQ MAF bins: "0.005 0.01 0.05"
-  
-The analysis will take a few minutes to run. You can find your analysis in the Tasks menu of your Project to check on its progress and see the results once it has completed.
-
-Look at the QQ plots by MAF bin -- how do they compare to the overall QQ plot of all variants?
-
-
-### Solution 4.4 (Application)
-
-The steps to perform this analysis are as follows:
+Use the `GENESIS Association results plotting` app on the BioData Catalyst powered by Seven Bridges platform to make additional QQ plots of the single variant association results binned by MAF: $0-0.5\%$, $0.5-1\%$, $1-5\%$, $\geq 5\%$. The steps to perform this analysis are as follows:
 
 - Copy the app to your project if it is not already there:
   - Click: Public Gallery > Apps > Browse
@@ -302,9 +281,15 @@ The steps to perform this analysis are as follows:
     - Results from association testing: `1KG_height_single_chr<CHR>.RData` (select all 22 chromosomes)
   - Specify the App Settings:
     - Association Type: single
-    - QQ MAC bins: "20 50 100"
+    - QQ MAF bins: "0.005 0.01 0.05"
   - Click: Run
-  
-You can find the expected output of this analysis by looking at the existing task `8. 1KG Association Single Plots` in the Tasks menu of your Project.
+
+The analysis will take a few minutes to run. You can find your analysis in the Tasks menu of your Project to check on its progress and see the results once it has completed.
+
+The output of this analysis will be a `_single_qq_bymaf.png` file. Look at the QQ plots by MAF bin -- how do they compare to the overall QQ plot of all variants?
+
+You can find the expected output of this analysis by looking at the existing task `8. 1KG Association Single Plots` in the Tasks menu of your Project, so you do not need to wait for your analysis to finish to look at the output.
+
+### Solution 4.4 (Application)
 
 From the binned QQ plots, we see that the common variants (i.e. MAF $\geq 5\%$) have a genomic control lambda = 1.044 and do not have significant deviation from the $y=x$ line. As suspected, the inflation is only present in the rarer variants, likely due to the small sample size. 

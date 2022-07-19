@@ -1,4 +1,4 @@
-# Introduction to GDS Format
+# 1. Introduction to GDS Format
 
 This tutorial introduces Genomic Data Structure (GDS), which is a storage format that can efficiently store genomic data and provide fast random access to subsets of the data. For more information on GDS for sequence data, see the [SeqArray package vignette](https://github.com/zhengxwen/SeqArray/blob/master/vignettes/SeqArrayTutorial.Rmd).
 
@@ -8,7 +8,7 @@ To use the R packages developed at the University of Washington Genetic Analysis
 
 ```{r vcf2gds, message = FALSE}
 library(SeqArray)
-repo_path <- "https://github.com/UW-GAC/SISG_2022/raw/master"
+repo_path <- "https://github.com/UW-GAC/SISG_2022/raw/main"
 if (!dir.exists("data")) dir.create("data")
 vcffile <- "data/1KG_phase3_subset_chr1.vcf.gz"
 if (!file.exists(vcffile)) download.file(file.path(repo_path, vcffile), vcffile)
@@ -221,18 +221,7 @@ seqClose(gds)
 
 ### Exercise 1.2 (Application)
 
-The Apps on the BioData Catalyst powered by Seven Bridges platform allow you to easily scale up cloud computing to running analyses on all chromosomes genome-wide and with larger samples. Use the `VCF to GDS Converter` app to convert the example 1000 Genomes files into GDS files. Below are the inputs and settings to use for this analysis:
-
-- Inputs
-  - Variants Files: `1KG_phase3_subset_chr<CHR>.vcf.gz` (select all 22 chromosomes)
-- App Settings
-  - check GDS: No
-  
-The analysis will take a few minutes to run. You can find your analysis in the Tasks menu of your Project to check on its progress and see the results once it has completed.
-
-### Solution 1.2 (Application)
-  
-The steps to perform this analysis are as follows:
+The Apps on the BioData Catalyst powered by Seven Bridges platform allow you to easily scale up cloud computing to running analyses on all chromosomes genome-wide and with larger samples. Use the `VCF to GDS Converter` app to convert the example 1000 Genomes files into GDS files. The steps to perform this analysis are as follows:
 
 - Copy the app to your project if it is not already there:
   - Click: Public Gallery > Apps > Browse
@@ -245,5 +234,7 @@ The steps to perform this analysis are as follows:
   - Specify the App Settings:
     - check GDS: No
   - Click: Run
+  
+The analysis will take a few minutes to run. You can find your analysis in the Tasks menu of your Project. Use the "View stats & logs" button to check on the status of your tasks. The output of this analysis will be a set of 22 GDS files, one per chromosome. 
 
 You can find the expected output of this analysis by looking at the existing task `1. Convert 1KG VCF to GDS` in the Tasks menu of your Project.

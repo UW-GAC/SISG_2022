@@ -366,7 +366,7 @@ pre code {
 
 
 <div id="population-structure-and-relatedness-inference" class="section level1">
-<h1>Population Structure and Relatedness Inference</h1>
+<h1>3. Population Structure and Relatedness Inference</h1>
 <p>Population structure due to genetic ancestry and genetic correlation
 due to sample relatedness are important factors to consider when
 performing association tests as their presence can lead to
@@ -387,7 +387,7 @@ typically use an LD threshold of <code>r^2 &lt; 0.1</code> to select
 variants. We use the <a href="https://github.com/zhengxwen/SNPRelate">SNPRelate</a> package to
 perform LD-pruning with GDS files.</p>
 <pre class="r"><code>library(SeqArray)
-repo_path &lt;- &quot;https://github.com/UW-GAC/SISG_2022/raw/master&quot;
+repo_path &lt;- &quot;https://github.com/UW-GAC/SISG_2022/raw/main&quot;
 
 # use a GDS file with all chromosomes
 if (!dir.exists(&quot;data&quot;)) dir.create(&quot;data&quot;)
@@ -470,17 +470,17 @@ grm &lt;- snpgdsGRM(gds, method=&quot;GCTA&quot;, snp.id = pruned)</code></pre>
 ## Calculating allele counts/frequencies ...
 ## 
 [..................................................]  0%, ETC: ---    
-[==================================================] 100%, completed, 1s
+[==================================================] 100%, completed, 0s
 ## # of selected variants: 21,287
 ##     # of samples: 1,126
 ##     # of SNVs: 21,287
 ##     using 1 thread
 ## CPU capabilities: Double-Precision SSE2
-## Thu Jul 14 12:59:03 2022    (internal increment: 436)
+## Mon Jul 18 17:26:48 2022    (internal increment: 436)
 ## 
 [..................................................]  0%, ETC: ---        
-[==================================================] 100%, completed, 3s
-## Thu Jul 14 12:59:06 2022    Done.</code></pre>
+[==================================================] 100%, completed, 4s
+## Mon Jul 18 17:26:52 2022    Done.</code></pre>
 <pre class="r"><code>names(grm)</code></pre>
 <pre><code>## [1] &quot;sample.id&quot; &quot;snp.id&quot;    &quot;method&quot;    &quot;grm&quot;</code></pre>
 <pre class="r"><code>dim(grm$grm)</code></pre>
@@ -524,11 +524,11 @@ king &lt;- snpgdsIBDKING(gds, snp.id=pruned)</code></pre>
 ## No family is specified, and all individuals are treated as singletons.
 ## Relationship inference in the presence of population stratification.
 ## CPU capabilities: Double-Precision SSE2
-## Thu Jul 14 12:59:06 2022    (internal increment: 13952)
+## Mon Jul 18 17:26:52 2022    (internal increment: 13952)
 ## 
 [..................................................]  0%, ETC: ---        
 [==================================================] 100%, completed, 2s
-## Thu Jul 14 12:59:08 2022    Done.</code></pre>
+## Mon Jul 18 17:26:54 2022    Done.</code></pre>
 <pre class="r"><code>names(king)</code></pre>
 <pre><code>## [1] &quot;sample.id&quot; &quot;snp.id&quot;    &quot;afreq&quot;     &quot;IBS0&quot;      &quot;kinship&quot;</code></pre>
 <pre class="r"><code># extract the kinship estimates
@@ -621,33 +621,33 @@ pca &lt;- pcair(gds,
 ##     using 1 thread
 ##     # of principal components: 32
 ## CPU capabilities: Double-Precision SSE2
-## Thu Jul 14 12:59:12 2022    (internal increment: 472)
+## Mon Jul 18 17:26:58 2022    (internal increment: 472)
 ## 
 [..................................................]  0%, ETC: ---        
-[==================================================] 100%, completed, 4s
-## Thu Jul 14 12:59:16 2022    Begin (eigenvalues and eigenvectors)
-## Thu Jul 14 12:59:17 2022    Done.</code></pre>
+[==================================================] 100%, completed, 5s
+## Mon Jul 18 17:27:03 2022    Begin (eigenvalues and eigenvectors)
+## Mon Jul 18 17:27:03 2022    Done.</code></pre>
 <pre><code>## Predicting PC Values for the Related Set...</code></pre>
 <pre><code>## SNP Loading:
 ##     # of samples: 1,040
 ##     # of SNPs: 23,779
 ##     using 1 thread
 ##     using the top 32 eigenvectors
-## Thu Jul 14 12:59:17 2022    (internal increment: 3780)
+## Mon Jul 18 17:27:03 2022    (internal increment: 3780)
 ## 
 [..................................................]  0%, ETC: ---        
-[==================================================] 100%, completed, 0s
-## Thu Jul 14 12:59:17 2022    Done.
+[==================================================] 100%, completed, 1s
+## Mon Jul 18 17:27:04 2022    Done.
 ## Sample Loading:
 ##     # of samples: 86
 ##     # of SNPs: 23,779
 ##     using 1 thread
 ##     using the top 32 eigenvectors
-## Thu Jul 14 12:59:17 2022    (internal increment: 45720)
+## Mon Jul 18 17:27:04 2022    (internal increment: 45720)
 ## 
 [..................................................]  0%, ETC: ---        
 [==================================================] 100%, completed, 0s
-## Thu Jul 14 12:59:17 2022    Done.</code></pre>
+## Mon Jul 18 17:27:04 2022    Done.</code></pre>
 <pre class="r"><code>names(pca)</code></pre>
 <pre><code>##  [1] &quot;vectors&quot;    &quot;values&quot;     &quot;rels&quot;       &quot;unrels&quot;     &quot;kin.thresh&quot;
 ##  [6] &quot;div.thresh&quot; &quot;sample.id&quot;  &quot;nsamp&quot;      &quot;nsnps&quot;      &quot;varprop&quot;   
@@ -824,30 +824,8 @@ even without the ancestry divergence).</li>
 <h3>Exercise 3.1 (Application)</h3>
 <p>Use the <code>LD Pruning</code> app on the BioData Catalyst powered
 by Seven Bridges platform to perform LD pruning on the example 1000
-Genomes GDS files you created previously. Below are the inputs and
-settings to use for this analysis:</p>
-<ul>
-<li>Inputs
-<ul>
-<li>GDS Files: <code>1KG_phase3_subset_chr&lt;CHR&gt;.gds</code> (select
-all 22 chromosomes)</li>
-</ul></li>
-<li>App Settings
-<ul>
-<li>Autosomes only: TRUE</li>
-<li>LD |r| threshold: 0.32 (<span class="math inline">\(\approx r^2 =
-0.1\)</span>)</li>
-<li>MAF threshold: 0 (in practice we usually use 0.01 or 0.05, but our
-example data doesn’t have many variants)</li>
-</ul></li>
-</ul>
-<p>The analysis will take a few minutes to run. You can find your
-analysis in the Tasks menu of your Project to check on its progress and
-see the results once it has completed.</p>
-</div>
-<div id="solution-3.1-application" class="section level3">
-<h3>Solution 3.1 (Application)</h3>
-<p>The steps to perform this analysis are as follows:</p>
+Genomes GDS files you created previously. The steps to perform this
+analysis are as follows:</p>
 <ul>
 <li>Copy the app to your project if it is not already there:
 <ul>
@@ -874,6 +852,16 @@ example data doesn’t have many variants)</li>
 <li>Click: Run</li>
 </ul></li>
 </ul>
+<p>The analysis will take a few minutes to run. You can find your
+analysis in the Tasks menu of your Project. Use the “View stats &amp;
+logs” button to check on the status of your tasks. Click on the bar that
+says “ld_pruning”, click “View Logs”, and click one of the “ld_pruning”
+folders (there’s one per chromosome). In here you can see detailed logs
+of the job; take a look at the <code>job.out.log</code> and
+<code>job.err.log</code> – these can be useful for debugging issues.</p>
+<p>The output of this analysis will be a single <code>_pruned.gds</code>
+file with the genotype data from the LD pruned variants across all 22
+chromosomes.</p>
 <p>You can find the expected output of this analysis by looking at the
 existing task <code>2. 1KG LD Pruning</code> in the Tasks menu of your
 Project. The output files are available in the Project, so you do not
@@ -884,25 +872,8 @@ exercise.</p>
 <h3>Exercise 3.2 (Application)</h3>
 <p>Use the <code>KING robust</code> app on the BioData Catalyst powered
 by Seven Bridges platform to perform a KING-robust analysis of the
-example 1000 Genomes data using the LD pruned variants. Below are the
-inputs and settings to use for this analysis:</p>
-<ul>
-<li>Inputs
-<ul>
-<li>GDS file: <code>1KG_phase3_subset_pruned.gds</code> (has pruned
-variants from all 22 chromosomes)</li>
-</ul></li>
-</ul>
-<p>The analysis will take a few minutes to run. You can find your
-analysis in the Tasks menu of your Project to check on its progress and
-see the results once it has completed.</p>
-<p>Look at the kinship plot generated by the task. How many 1st degree
-relative pairs are identified? How many 2nd degree relative pairs are
-identified?</p>
-</div>
-<div id="solution-3.2-application" class="section level3">
-<h3>Solution 3.2 (Application)</h3>
-<p>The steps to perform this analysis are as follows:</p>
+example 1000 Genomes data using the LD pruned variants. The steps to
+perform this analysis are as follows:</p>
 <ul>
 <li>Copy the app to your project if it is not already there:
 <ul>
@@ -921,12 +892,23 @@ variants from all 22 chromosomes)</li>
 <li>Click: Run</li>
 </ul></li>
 </ul>
+<p>The analysis will take a few minutes to run. You can find your
+analysis in the Tasks menu of your Project to check on its progress and
+see the results once it has completed.</p>
+<p>The output of this analysis will be a <code>_king_robust.gds</code>
+file that has the kinship estimates and a
+<code>_king_robust_all.pdf</code> with the plot of estimated kinship
+vs. IBS0. Look at the kinship plot – how many 1st degree relative pairs
+are identified? How many 2nd degree relative pairs are identified?</p>
 <p>You can find the expected output of this analysis by looking at the
 existing task <code>3. 1KG King Robust</code> in the Tasks menu of your
 Project. The output files are available in the Project, so you do not
 need to wait for your analysis to finish to move to the next
 exercise.</p>
-<p>From the kinship plot, you can see that there are 8 1st degree
+</div>
+<div id="solution-3.2-application" class="section level3">
+<h3>Solution 3.2 (Application)</h3>
+<p>From the kinship plot, we can see that there are 8 1st degree
 relative pairs (6 parent-offspring; 2 full sibling) and 4 2nd degree
 relative pairs identified.</p>
 </div>
@@ -935,39 +917,8 @@ relative pairs identified.</p>
 <p>Use the <code>PC-AiR</code> app on the BioData Catalyst powered by
 Seven Bridges platform to perform a PC-AiR analysis of the example 1000
 Genomes data using the LD pruned variants. Use the KING-robust kinship
-estimates as both the kinship and divergence measures. Below are the
-inputs and settings to use for this analysis:</p>
-<ul>
-<li>Inputs
-<ul>
-<li>Pruned GDS File: <code>1KG_phase3_subset_pruned.gds</code> (has
-pruned variants from all 22 chromosomes)</li>
-<li>Kinship File: <code>1KG_phase3_subset_king_robust.gds</code></li>
-<li>Divergence File: <code>1KG_phase3_subset_king_robust_copy.gds</code>
-(exact copy of the kinship file; there is a bug where you can’t use the
-same file as the input for both)</li>
-<li>Phenotype file: <code>sample_phenotype_annotation.RData</code></li>
-</ul></li>
-<li>App Settings
-<ul>
-<li>pca_byrel &gt; Number of PCs: 10</li>
-<li>pca_plots &gt; Group: pop</li>
-<li>pca_plots &gt; Number of PCs: 10</li>
-<li>PC-variant correlation &gt; Run PC-variant correlation: FALSE (extra
-diagnostic step that takes a while to run)</li>
-</ul></li>
-</ul>
-<p>The analysis will take a few minutes to run. You can find your
-analysis in the Tasks menu of your Project to check on its progress and
-see the results once it has completed.</p>
-<p>Look at the parallel coordinates plot (<code>_parcoord.pdf</code>)
-generated by the task. How many PCs appear to reflect population
-structure in the sample? This will determine how many PCs you should use
-to adjust PC-Relate in the next exercise.</p>
-</div>
-<div id="solution-3.3-application" class="section level3">
-<h3>Solution 3.3 (Application)</h3>
-<p>The steps to perform this analysis are as follows:</p>
+estimates as both the kinship and divergence measures. The steps to
+perform this analysis are as follows:</p>
 <ul>
 <li>Copy the app to your project if it is not already there:
 <ul>
@@ -999,11 +950,22 @@ diagnostic step that takes a while to run)</li>
 <li>Click: Run</li>
 </ul></li>
 </ul>
+<p>The analysis will take a few minutes to run. You can find your
+analysis in the Tasks menu of your Project to check on its progress and
+see the results once it has completed.</p>
+<p>The output of this analysis is a “_pca.RData” object with the PC
+values and several PC plots. Look at the parallel coordinates plot
+(“_parcoord.pdf”) generated by the task. How many PCs appear to reflect
+population structure in the sample? This will determine how many PCs you
+should use to adjust PC-Relate in the next exercise.</p>
 <p>You can find the expected output of this analysis by looking at the
 existing task <code>4. 1KG PC-AiR</code> in the Tasks menu of your
 Project. The output files are available in the Project, so you do not
 need to wait for your analysis to finish to move to the next
 exercise.</p>
+</div>
+<div id="solution-3.3-application" class="section level3">
+<h3>Solution 3.3 (Application)</h3>
 <p>From the parallel coordinates plot, we can see that PCs 1-4 and 6
 appear to reflect population structure (PC5 appears to be driven by a
 single individual). We will use the first 6 PCs to adjust for population
@@ -1014,34 +976,8 @@ structure in the PC-Relate analysis in the next exercise.</p>
 <p>Use the <code>PC-Relate</code> app on the BioData Catalyst powered by
 Seven Bridges platform to perform a PC-Relate analysis of the example
 1000 Genomes data using the LD pruned variants. Use the PC-AiR PCs to
-adjust for population structure. Below are the inputs and settings to
-use for this analysis:</p>
-<ul>
-<li>Inputs
-<ul>
-<li>GDS File: <code>1KG_phase3_subset_pruned.gds</code> (has pruned
-variants from all 22 chromosomes)</li>
-<li>PCA file: <code>1KG_phase3_subset_pca.RData</code></li>
-</ul></li>
-<li>App Settings
-<ul>
-<li>pcrelate_beta &gt; Number of PCs: 6</li>
-<li>pcrelate &gt; Number of PCs: 6</li>
-<li>pcrelate &gt; Return IBD probabilities?: TRUE</li>
-<li>kinship_plots &gt; Kinship plotting threshold: 0</li>
-<li>kinship_plots &gt; Return IBD probabilities?: TRUE</li>
-</ul></li>
-</ul>
-<p>The analysis will take a few minutes to run. You can find your
-analysis in the Tasks menu of your Project to check on its progress and
-see the results once it has completed.</p>
-<p>Look at the kinship plot generated by the task. How many 1st degree
-relative pairs are identified? How many 2nd degree relative pairs are
-identified?</p>
-</div>
-<div id="solution-3.4-application" class="section level3">
-<h3>Solution 3.4 (Application)</h3>
-<p>The steps to perform this analysis are as follows:</p>
+adjust for population structure. The steps to perform this analysis are
+as follows:</p>
 <ul>
 <li>Copy the app to your project if it is not already there:
 <ul>
@@ -1069,9 +1005,22 @@ variants from all 22 chromosomes)</li>
 <li>Click: Run</li>
 </ul></li>
 </ul>
+<p>The analysis will take a few minutes to run. You can find your
+analysis in the Tasks menu of your Project to check on its progress and
+see the results once it has completed.</p>
+<p>The output of this analysis is a <code>_pcrelate.RData</code> file
+that contains the PC-Relate relatedness estimates, a
+<code>_pcrelate_Matrix.RData</code> file that contains a sparse matrix
+of kinship estimates (more on this in the Mixed Model tutorial), and a
+<code>_pcrelate_all.pdf</code> with the plot of estimated kinship
+vs. k0. Look at the kinship plot – how many 1st degree relative pairs
+are identified? How many 2nd degree relative pairs are identified?</p>
 <p>You can find the expected output of this analysis by looking at the
 existing task <code>5. 1KG PC-Relate</code> in the Tasks menu of your
 Project.</p>
+</div>
+<div id="solution-3.4-application" class="section level3">
+<h3>Solution 3.4 (Application)</h3>
 <p>From the kinship plot, you can see that there are 8 1st degree
 relative pairs (6 parent-offspring; 2 full sibling) and 3 2nd degree
 relative pairs identified.</p>

@@ -1,4 +1,4 @@
-# Single Variant Association Tests
+# 2. Single Variant Association Tests
 
 Single variant association tests are used to identify genetic variants associated with a phenotype of interest. Performing single-variant tests genome-wide is commonly referred to as a Genome Wide Association Study (GWAS). This tutorial demonstrates how to perform single variant association tests using regression models with the [GENESIS](https://bioconductor.org/packages/release/bioc/html/GENESIS.html) R/Bioconductor package. 
 
@@ -15,7 +15,7 @@ library(Biobase)
 First, we load our subject phenotype data (i.e. both the outcome and covariate data), which is currently stored in a tab separated .tsv file. We then create metadata to describe the columns in of the phenotype data. Finally, we create an `AnnotatedDataFrame` by pairing the phenotype data with the metadata.
 
 ```{r}
-repo_path <- "https://github.com/UW-GAC/SISG_2022/raw/master"
+repo_path <- "https://github.com/UW-GAC/SISG_2022/raw/main"
 if (!dir.exists("data")) dir.create("data")
 
 # load phenotype data
