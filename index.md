@@ -42,16 +42,16 @@ NOTE: All times are Pacific Daylight Time (GMT-07:00)
 | 10:15am-11:45am | Population Structure and Relatedness Inference | [Slides](), [Recording]() | [.Rmd](https://drive.google.com/file/d/16Id2jvOblvcOMj1paCaEE8dPUHVtDV7D/view?usp=sharing), [.html](https://drive.google.com/file/d/1wQBkOsTWmdhB3HqqufqFgkQzAz0kzKyY/view?usp=sharing), [Recording]() |
 | 11:45am-12:45pm | _Lunch_ | | | 
 | 12:45pm-2:00pm | Mixed Model Association Testing | [Slides](), [Recording]() | [.Rmd](https://drive.google.com/file/d/1qN6vKr4CvBV51c6TQl2X8inDz63ltyy6/view?usp=sharing), [.html](https://drive.google.com/file/d/11PCbi3D9GcVC1wVMl3huSwMaZ71TI6Uh/view?usp=sharing), [Recording]() |
-| 2:00pm-2:30pm | R shiny Apps for Exploring Results | [Slides](), [Recording]() | |
+| 2:00pm-2:30pm | R shiny Apps for Exploring Results | [Slides](), [Recording]() | [.Rmd](https://drive.google.com/file/d/1sd6ok9BiBLq2ZCKtNauZg9Irow_kVObO/view?usp=sharing), [.html](https://drive.google.com/file/d/19bYJ5ny-krrQFNzmMOpW8hS5nfPfhAJU/view?usp=sharing), [Recording]() |
 
 **Friday, July 29th**
 
 | Time | Topic | Lecture | Exercises/Discussion |
 | --- | --- | --- | --- |
 | 8:00am-9:00am | Association Tests Part III: Multiple Variant Tests | [Slides](), [Recording]() | |
-| 9:00am-10:00am | Variant Annotation for Aggregate Association Testing | [Slides](), [Recording]() | [.Rmd](https://drive.google.com/file/d/1jPAq8Eru7WTAS_jVeiiCAjMms0fe98wt/view?usp=sharing), [.html](https://drive.google.com/file/d/1520n5miO-tq1HIEWFrj8rmUQZLS9JzSb/view?usp=sharing), [Recording]() |
+| 9:00am-10:00am | Variant Annotation for Aggregate Association Testing | [Slides](), [Recording]() | [.Rmd](https://drive.google.com/file/d/1Y4kVEpA43EhgfznoraeScKzcvoOh6OVO/view?usp=sharing), [.html](https://drive.google.com/file/d/1YnHnJpcAgJdmoi3WglLmXF7T0jfYI-0c/view?usp=sharing), [Recording]() |
 | 10:00am-10:30am | _Break_ | | | 
-| 10:30am-11:15am | Annotation Explorer Demo | [Slides](), [Recording]() |  |
+| 10:30am-11:15am | Annotation Explorer Demo | [Slides](), [Recording]() | [.Rmd](https://drive.google.com/file/d/169_RoYUQ7Kra_4gVACPKMX_cJhCNYeiu/view?usp=sharing), [.html](https://drive.google.com/file/d/1byzBDurNB7ij09Xv7bqBTgua69E_8GEV/view?usp=sharing), [Recording]() |
 | 11:15am-12:00pm | Advanced Annotation Strategies for Association Testing | [Slides](), [Recording]() |  |
 | 12:00pm-1:00pm | _Lunch_ | | |
 | 1:00pm-2:00pm | Recent Findings from Sequencing Studies | [Slides](), [Recording]() |  |
