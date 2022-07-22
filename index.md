@@ -28,7 +28,7 @@ NOTE: All times are Pacific Daylight Time (GMT-07:00)
 | --- | --- | --- | --- |
 | 11:30am-11:40am | Introduction | [Slides](), [Recording]() | |
 | 11:40am-12:30pm | Using BioData Catalyst powered by Seven Bridges | [Slides](), [Recording]() | |
-| 12:30pm-1:30pm | Intro to Genomic Data Structure | [Slides](), [Recording]() | [.Rmd](https://drive.google.com/file/d/1qKCVvDerr0sZHuNlWhjoJB0mmIYSha2P/view?usp=sharing), [.html](https://drive.google.com/file/d/1Yqhpog5REAinq-nOokDYD-O7TjFASjub/view?usp=sharing), [Recording]() |
+| 12:30pm-1:30pm | Intro to Genomic Data Structure | [Slides](), [Recording]() | [.Rmd](https://github.com/UW-GAC/SISG_2022/blob/gh-pages/01_gds_intro.Rmd), [.html](https://github.com/UW-GAC/SISG_2022/blob/gh-pages/01_gds_intro.html), [Recording]() |
 | 1:30pm-1:45pm | _Break_ | | | 
 | 1:45pm-2:30pm | Association Tests Part I: Background | [Slides](), [Recording]() | |
 
