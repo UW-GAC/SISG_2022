@@ -1,4 +1,4 @@
-# 5. Aggregate Association Tests
+# 6. Aggregate Association Tests
 
 Multiple-variant association tests, which are commonly used for testing rare variants in aggregate, can be used to identify when variants in a genomic region (e.g. a gene), potentially with certain properties defined by variant annotation, are associated with a phenotype of interest. Under certain assumptions, these aggregate tests can improve statistical power to detect association when single variant tests are under-powered and/or poorly calibrated. This tutorial demonstrates how to perform aggregate multiple-variant association tests using the [GENESIS](https://bioconductor.org/packages/release/bioc/html/GENESIS.html) R/Bioconductor package. 
 
@@ -207,7 +207,7 @@ qqPlot(assoc$results$pval_SMMAT)
 
 
 
-### Exercise 5.1 (Data Studio)
+### Exercise 6.1 (Data Studio)
 
 Perform a SKAT test for the outcome "status". Adjust your model for the covariates sex, age, study, and ancestry PCs. Also include the kinship matrix as a random effect to adjust for relatedness. When performing your SKAT test, use all variants with alternate allele frequency < 20%, and use the Wu weights to give larger weights to rarer variants. Use the same aggregation units as in the examples. Which aggregation units have the smallest and largest cumulative alternate allele count (`n.alt`), and what are the values? Make a QQ plot of the SKAT p-values. 
 
@@ -224,7 +224,7 @@ Perform a SKAT test for the outcome "status". Adjust your model for the covariat
 #
 ```
 
-### Solution 5.1 (Data Studio)
+### Solution 6.1 (Data Studio)
 
 Perform a SKAT test for the outcome "status". Adjust your model for the covariates sex, age, study, and ancestry PCs. Also include the kinship matrix as a random effect to adjust for relatedness. When performing your SKAT test, use all variants with alternate allele frequency < 20%, and use the Wu weights to give larger weights to rarer variants. Use the same aggregation units as in the examples. Which aggregation units have the smallest and largest cumulative alternate allele count (`n.alt`), and what are the values? Make a QQ plot of the SKAT p-values. 
 
@@ -278,7 +278,7 @@ seqClose(seqData)
 ```
 
 
-### Exercise 5.2 (Application)
+### Exercise 6.2 (Application)
 
 Use the `GENESIS Aggregate Association Testing` app on the BioData Catalyst powered by Seven Bridges platform to perform a SMMAT test for height using the null model previously fit in Exercise 4.2. Only include variants with alternate allele frequency < 10% and use the Wu weights to upweight rarer variants. Use the genotype data in the genome-wide GDS files you created previously. The steps to perform this analysis are as follows:
 
@@ -306,10 +306,10 @@ The analysis will take a few minutes to run. You can find your analysis in the T
 
 The output of this analysis will be 22 `_smmat_chr<CHR>.RData` files with the association test results for each chromosome as well as a `_smmat_manh.png` file with the Manhattan plot and a `_smmat_qq.png` file with the QQ plot. 
 
-You can find the expected output of this analysis by looking at the existing task `9. 1KG SMMAT Association Test` in the Tasks menu of your Project. The output files are available in the Project, so you do not need to wait for your analysis to finish to look at the output.
+You can find the expected output of this analysis by looking at the existing task `10. 1KG SMMAT Association Test` in the Tasks menu of your Project. The output files are available in the Project, so you do not need to wait for your analysis to finish to look at the output.
 
 
-### Exercise 5.3 (Data Studio)
+### Exercise 6.3 (Data Studio)
 
 After running an Application, you may want to load the results into RStudio to explore them interactively. All of the output files are saved in the directory `/sbgenomics/project-files/`. Load the chr 1 SMMAT results into RStudio and find the gene with the smallest p-value.  
 
@@ -326,7 +326,7 @@ After running an Application, you may want to load the results into RStudio to e
 #
 ```
 
-### Solution 5.3 (Data Studio)
+### Solution 6.3 (Data Studio)
 
 After running an Application, you may want to load the results into RStudio to explore them interactively. All of the output files are saved in the directory `/sbgenomics/project-files/`. Load the chr 1 SMMAT results into RStudio and find the gene with the smallest p-value.  
 
