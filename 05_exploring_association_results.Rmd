@@ -1,14 +1,14 @@
 # 5. Exploring Association Results
 
-In this tutorial, we will learn how to use the [GENESIS Model Explorer App](https://genesis-model-explorer-app.bdc.sb-webapp.com/?project=smgogarten/uw-gac-commit) and the [LocusZoom Shiny App](), which are both "Interactive Browsers" built with [R Shiny](https://shiny.rstudio.com/) on the NHLBI BioData Catalyst powered by Seven Bridges cloud platform. Currently, both of these applications cap the number of users at a given time, so we will not all be able to use it live concurrently during the workshop. The instructors will demonstrate the use of each tool by going through these exercises now, and everyone can perform the hands-on exercises after the workshop is over, at their own convenience.
+In this tutorial, we will learn how to use the [GENESIS Model Explorer App](https://genesis-model-explorer-app.bdc.sb-webapp.com/?project=smgogarten/uw-gac-commit) and the [LocusZoom Shiny App](https://locuszoom-shiny-app.bdc.sb-webapp.com/), which are both "Interactive Browsers" built with [R Shiny](https://shiny.rstudio.com/) on the NHLBI BioData Catalyst powered by Seven Bridges cloud platform. Currently, both of these applications cap the number of users at a given time, so we will not all be able to use it live concurrently during the workshop. The instructors will demonstrate the use of each tool by going through these exercises now, and everyone can perform the hands-on exercises after the workshop is over, at their own convenience.
 
 ## GENESIS Model Explorer App
 
 The [GENESIS Model Explorer App](https://genesis-model-explorer-app.bdc.sb-webapp.com/?project=smgogarten/uw-gac-commit) is an interactive tool that enables users to make figures to visualize and explore the results of a GENESIS null model, paired with phenotype and genotype data on the same samples. It is meant to provide an intuitive interface for researchers to easily select, visualize, and explore phenotypes, genotypes, and a fitted GENESIS model interactively with no prior R programming knowledge. The app takes three inputs:
 
 - **Null Model File:** The null model file should be any fitted GENESIS null model saved in .RData format. The null model could have been created interactively using the `fitNullModel` function in an R session (e.g. in Data Studio or on your local machine), or it could be the output from the `GENESIS Null Model` application.
-- **Phenotype File:** The phenotype file should be a data.frame or `AnnotatedDataFrame` saved in .RData format. The data.frame must contain all of the samples included in your null model file in a column named `sample.id`, with additional columns containing phenotype variables of interest. If you used the `GENESIS Null Model` application to fit your null model, we recommend using the `_phenotypes.RData` file output, which contains all of the phenotype data from all of the samples used in the analysis. Alternatively, you can use the same phenotype file used as input to fit your null model, or an entirely new file where you have added additional columns with phenotype variables of interest.
-- **Genotype File (Optional):** - Including a genotype file is optional. Providing a genotype file allows the user to make figures looking at the relationships with variants of interest with null model variables and phenotypes of interest. The genotype file should be a data.frame saved in .rds format. The data.frame must contain all of the samples included in your null model file in a column named `sample.id`, with additional columns containing variant allele counts or dosages. Conveniently, this file can be generated from an existing GDS file with the `GDS Genotype Extractor` application (see Exercise 5.1).
+- **Phenotype File:** The phenotype file should be a data.frame or `AnnotatedDataFrame` saved in .RData format. The data.frame must contain all of the samples included in your null model file in a column named `sample.id`, with additional columns containing phenotype variables of interest. If you used the `GENESIS Null Model` application to fit your null model, we recommend using the `_phenotypes.RData` output file, which contains all of the phenotype data from all of the samples used in the analysis. Alternatively, you can use the same phenotype file used as input to fit your null model, or an entirely new file where you have added additional columns with phenotype variables of interest.
+- **Genotype File (Optional):** Providing an optional genotype file allows the user to make figures looking at the relationships of variants of interest with null model variables and phenotypes of interest. The genotype file should be a data.frame saved in .rds format. The data.frame must contain all of the samples included in your null model file in a column named `sample.id`, with additional columns containing variant allele counts or dosages. Conveniently, this file can be generated from an existing GDS file with the `GDS Genotype Extractor` application (see below).
 
 We will now use the [GENESIS Model Explorer](https://genesis-model-explorer-app.bdc.sb-webapp.com/?project=smgogarten/uw-gac-commit) to make some figures exploring the data:
 
@@ -106,7 +106,7 @@ saveRDS(sampid, file = '/sbgenomics/output-files/1KG_height_sample_include.rds')
 
 ### Exercise 5.1 (Application)
 
-Use the `GDS Genotype Extractor` app on the BioData Catalyst powered by Seven Bridges platform to create an .rds file with genotype values for all samples in our `1KG_phase3_subset` GDS files at the 3 variants on chromosome 8 we identified in Exercise 5.1. The steps to perform this analysis are as follows:
+Use the `GDS Genotype Extractor` app on the BioData Catalyst powered by Seven Bridges platform to create an .rds file with genotype values for all samples in our `1KG_phase3_subset` GDS files at the 3 variants on chromosome 8 we identified above. The steps to perform this analysis are as follows:
 
 - Copy the app to your project if it is not already there:
   - Click: Public Gallery > Apps > Browse
@@ -151,18 +151,65 @@ From the boxplot, we can see that there is a slight "upward" trend in the median
 NOTE: the trend across genotype values is not "steep" in this example. This is partially because our example variant is not very significant, but similar figures for genome-wide significant associations often won't look *that* different. Typically, for complex polygenic traits, the effect size of any one variant is quite small, so the overlap in residual distributions by genotype value is substantial, and the trend in the mean will be slight -- this is why GWAS need such large samples to have statistical power!
 
 
-<!-- ## LocusZoom Shiny App  -->
+## LocusZoom Shiny App 
 
-<!-- The [Locus Zoom Shiny App]() is an interactive tool that enables users to make LocusZoom plots of association results produced with the GENESIS association testing apps. We will now use the [LocusZoom Shiny App]() to make a LocusZoom plot of our association "hit". -->
+The [Locus Zoom Shiny App](https://locuszoom-shiny-app.bdc.sb-webapp.com/) is an interactive tool built on the [LocusZoom.js library](https://statgen.github.io/locuszoom/) that enables users to make LocusZoom plots of association results produced with the `GENESIS Single Variant Association Testing` app. We will now use the LocusZoom Shiny App to make a LocusZoom plot of our association "hit" on chr8.
 
-<!-- - Launch the interactive browser -->
-<!--   - From your Project Dashboard, click "Interactive Browsers" (top right) -->
-<!--   - Click: "Open" on the LocusZoom Shiny App -->
-<!--   - Click: "Yes" to proceed -->
+- Launch the interactive browser
+  - From your Project Dashboard, click "Interactive Browsers" (top right)
+  - Click: "Open" on the LocusZoom Shiny App
+  - Click: "Yes" to proceed
+  
+The application requires data to be stored as a JSON file. There is a `GENESIS Data JSONizer` tool that converts single-variant association test results .RData file as output by the `GENESIS Single Variant Association Testing` app into the required JSON file. This tool also calculates the linkage disequilibrium (LD) measures required to make the LocusZoom plot for the selected variants.
 
-<!-- The application requires data to be stored as a JSON file. There is a "JSONizer" tool that converts association results data from an .RData file into the required JSON file -->
+- Click the "GENESIS Data JSONizer" tab at the top of the screen
+- Select Input Files
+  - GDS file: `1KG_phase3_subset_chr8.gds`
+  - .RData file: `1KG_height_single_chr8.RData`
+- JSONizer parameters
+  - Check: "Specify variant and a flanking region around it"
+  - Select the position of the variant of interest: 73417176
+  - Specify flanking region: 1000000 (i.e. 1Mb in each direction. Note: our data is very sparse, you probably want a smaller flanking region with dense sequencing data)
+  - Select test type: score
+- Click: JSONize
+  
+You have the option to download the JSON file to your local environment or upload it to the BioData Catalyst platform and save it for later, if you desire. 
 
-<!-- - Click the JSONizer tab -->
-<!-- -  -->
+- Expand: JSON File - Download and Export Form
+- Set a file name (e.g. `1KG_height_single_chr8_73417176.json`)
+- Click: Export JSON file to platform
+- Select your Project and Click: Confirm
+- Click: Upload
 
-<!-- Make the plot  -->
+There are several optional data layers you can add to your LocusZoom plot. The most likely layer that you will want to adjust is the Linkage Disequilibrium (LD) layer. The tool gives you the option to either compute LD measures using your sample genotype data stored in the GDS file (the default), or use the University of Michigan (UM) database. 
+
+- Expand: Option Data Layers
+- Expand: Linkage Disequilibrium
+- Select Data Source: Compute LD Data
+- Select reference variant: 8:73417176_A/G (our variant of interest)
+- Click: Calculate LD
+
+You can expand the Linkage Disequilibrium Data Overview tab to see a preview of the calculated LD data, and you can download the data as a JSON file to your local environment or upload it to the BioData Catalyst platform and save it for later, if you desire.
+
+- Change the Genome Build to GRCh37 for this dataset
+
+You can review the Initial Plot State Info to make sure everything looks as expected, and then make the plot!
+
+- Click: Generate plot
+
+The generated plot is interactive. You can hover over variants to see their chromosome, position, alleles, and association p-value. You can drag the figure left or right to see different sections of the plotted region. You can save the current figure as a .png or .svg file either locally or on the BioData Catalyst platform. 
+
+If you've saved your .json association results file and your .json LD statistics file to your Project, you can come back later and recreate your LocusZoom plot by selecting the "Use Your Own Data Sources" tab at the top of the LocusZoom Shiny App page. This time, rather than JSONizing the data, you can select the .json files as input, and set the plotting parameters the same as we did above.
+
+
+## Exercise 5.3 (LocusZoom Shiny App)
+
+Notably, the LocusZoom plot we generated with the example data is *very* sparse (there are only 7 variants), which is not representative of what a LocusZoom plot would actually look like in practice. There are example data sets available in the tool via the [University of Michigan database](https://portaldev.sph.umich.edu/docs/api/v1/#introduction). Select the "Explore UM Database" tab at the top of the LocusZoom Shiny App page and generate a LocusZoom plot using the GIANT Consortium BMI meta-analysis (PMID: 20935630) data for variant chr16:53803574, using a flanking region of 100kb. What is the p-value of the variant chr16:53803574_T/A? What gene is this variant located in? Change the LD reference population to EUR (European ancestry) -- what do you observe? Change the LD reference population to AFR (African ancestry) -- what do you observe? 
+
+## Solution 5.3 (Locus Zoom Shiny App)
+
+- The p-value of variant chr16:53803574_T/A is reported as $2.05 x 10^{-62}$
+- This variant is located in the FTO gene, which is well established to be associated with BMI.
+- Using the EUR LD reference panel, many of the variants in this region with similar p-values have very high LD with variant chr16:53803574_T/A (indicated by the red color).
+- Using the AFR LD reference panel, many of the variants in this region with similar p-values no longer have high LD with variant chr16:53803574_T/A (indicated by the blue color).
+

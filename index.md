@@ -28,7 +28,7 @@ NOTE: All times are Pacific Daylight Time (GMT-07:00)
 | --- | --- | --- | --- |
 | 11:30am-11:40am | Introduction | [Slides](), [Recording]() | |
 | 11:40am-12:30pm | Using BioData Catalyst powered by Seven Bridges | [Slides](), [Recording]() | |
-| 12:30pm-1:30pm | Intro to Genomic Data Structure | [Slides](), [Recording]() | [.Rmd](https://github.com/UW-GAC/SISG_2022/blob/gh-pages/01_gds_intro.Rmd), [.html](https://github.com/UW-GAC/SISG_2022/blob/gh-pages/01_gds_intro.html), [Recording]() |
+| 12:30pm-1:30pm | Intro to Genomic Data Structure | [Slides](), [Recording]() | [.Rmd](https://github.com/UW-GAC/SISG_2022/blob/main/01_gds_intro.Rmd), [.html](https://github.com/UW-GAC/SISG_2022/blob/main/01_gds_intro.html), [Recording]() |
 | 1:30pm-1:45pm | _Break_ | | |
 | 1:45pm-2:30pm | Association Tests Part I: Background | [Slides](), [Recording]() | |
 
@@ -37,21 +37,21 @@ NOTE: All times are Pacific Daylight Time (GMT-07:00)
 | Time | Topic | Lecture | Exercises/Discussion |
 | --- | --- | --- | --- |
 | 8:00am-8:50am | Association Tests Part II: Single Variant Tests | [Slides](), [Recording]() | |
-| 8:50am-9:45am | GENESIS for Single Variant Association Tests | [Slides](), [Recording]() | [.Rmd](https://drive.google.com/file/d/1HvzsydG_p5eZ908gEos8mxYDgd8oYbzv/view?usp=sharing), [.html](https://drive.google.com/file/d/1SA-uBCc0LoPOORwcXXVAV4scIieAE8aK/view?usp=sharing), [Recording]() |
+| 8:50am-9:45am | GENESIS for Single Variant Association Tests | [Slides](), [Recording]() | [.Rmd](https://github.com/UW-GAC/SISG_2022/blob/main/02_single_variant_tests.Rmd), [.html](https://github.com/UW-GAC/SISG_2022/blob/main/02_single_variant_tests.html), [Recording]() |
 | 9:45am-10:15am | _Break_ | | |
-| 10:15am-11:45am | Population Structure and Relatedness Inference | [Slides](), [Recording]() | [.Rmd](https://drive.google.com/file/d/16Id2jvOblvcOMj1paCaEE8dPUHVtDV7D/view?usp=sharing), [.html](https://drive.google.com/file/d/1wQBkOsTWmdhB3HqqufqFgkQzAz0kzKyY/view?usp=sharing), [Recording]() |
+| 10:15am-11:45am | Population Structure and Relatedness Inference | [Slides](), [Recording]() | [.Rmd](https://github.com/UW-GAC/SISG_2022/blob/main/03_pop_structure_relatedness.Rmd), [.html](https://github.com/UW-GAC/SISG_2022/blob/main/03_pop_structure_relatedness.html), [Recording]() |
 | 11:45am-12:45pm | _Lunch_ | | |
-| 12:45pm-2:00pm | Mixed Model Association Testing | [Slides](), [Recording]() | [.Rmd](https://drive.google.com/file/d/1qN6vKr4CvBV51c6TQl2X8inDz63ltyy6/view?usp=sharing), [.html](https://drive.google.com/file/d/11PCbi3D9GcVC1wVMl3huSwMaZ71TI6Uh/view?usp=sharing), [Recording]() |
-| 2:00pm-2:30pm | R shiny Apps for Exploring Results | [Slides](), [Recording]() | [.Rmd](https://drive.google.com/file/d/1sd6ok9BiBLq2ZCKtNauZg9Irow_kVObO/view?usp=sharing), [.html](https://drive.google.com/file/d/19bYJ5ny-krrQFNzmMOpW8hS5nfPfhAJU/view?usp=sharing), [Recording]() |
+| 12:45pm-2:00pm | Mixed Model Association Testing | [Slides](), [Recording]() | [.Rmd](https://github.com/UW-GAC/SISG_2022/blob/main/04_mixed_models.Rmd), [.html](https://github.com/UW-GAC/SISG_2022/blob/main/04_mixed_models.html), [Recording]() |
+| 2:00pm-2:30pm | R shiny Apps for Exploring Results | [Slides](), [Recording]() | [.Rmd](https://github.com/UW-GAC/SISG_2022/blob/main/05_exploring_association_results.Rmd), [.html](https://github.com/UW-GAC/SISG_2022/blob/main/05_exploring_association_results.html), [Recording]() |
 
 **Friday, July 29th**
 
 | Time | Topic | Lecture | Exercises/Discussion |
 | --- | --- | --- | --- |
 | 8:00am-9:00am | Association Tests Part III: Multiple Variant Tests | [Slides](), [Recording]() | |
-| 9:00am-10:00am | Variant Annotation for Aggregate Association Testing | [Slides](), [Recording]() | [.Rmd](https://drive.google.com/file/d/1Y4kVEpA43EhgfznoraeScKzcvoOh6OVO/view?usp=sharing), [.html](https://drive.google.com/file/d/1YnHnJpcAgJdmoi3WglLmXF7T0jfYI-0c/view?usp=sharing), [Recording]() |
+| 9:00am-10:00am | Variant Annotation for Aggregate Association Testing | [Slides](), [Recording]() | [.Rmd](https://github.com/UW-GAC/SISG_2022/blob/main/06_aggregate_tests.Rmd), [.html](https://github.com/UW-GAC/SISG_2022/blob/main/06_aggregate_tests.html), [Recording]() |
 | 10:00am-10:30am | _Break_ | | |
-| 10:30am-11:15am | Annotation Explorer Demo | [Slides](), [Recording]() | [.Rmd](https://drive.google.com/file/d/169_RoYUQ7Kra_4gVACPKMX_cJhCNYeiu/view?usp=sharing), [.html](https://drive.google.com/file/d/1byzBDurNB7ij09Xv7bqBTgua69E_8GEV/view?usp=sharing), [Recording]() |
+| 10:30am-11:15am | Annotation Explorer Demo | [Slides](), [Recording]() | [.Rmd](https://github.com/UW-GAC/SISG_2022/blob/main/07_annotation_explorer.Rmd), [.html](https://github.com/UW-GAC/SISG_2022/blob/main/07_annotation_explorer.html), [Recording]() |
 | 11:15am-12:00pm | Advanced Annotation Strategies for Association Testing | [Slides](), [Recording]() |  |
 | 12:00pm-1:00pm | _Lunch_ | | |
 | 1:00pm-2:00pm | Recent Findings from Sequencing Studies | [Slides](), [Recording]() |  |
