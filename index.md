@@ -3,7 +3,7 @@ This site contains course materials for SISG Module 17: Computational Pipeline f
 - **Instructors:** Ken Rice, Laura Raffield, and Matthew Conomos
 - **TAs:** Deepti Jain and Anya Mikhaylova
 - **Zoom Link:** [https://washington.zoom.us/j/91863603677](https://washington.zoom.us/j/91863603677)
-- **[Join the Slack Discussion](https://app.slack.com/client/T015W8GL1CM/C03KLGG4XRV)**
+- **[Join the Slack Discussion](https://uwbiostatisticssisg.slack.com/archives/C03KLGG4XRV)**
 
 ## Course Format
 
@@ -77,6 +77,6 @@ NHLBI BioData Catalyst Powered by Seven Bridges
 
 If you are new to R, you might find the following material helpful:
 
-- [Introduction to R](http://faculty.washington.edu/kenrice/rintro/indexSEA15.shtml) materials from SISG Module 3
+- [Introduction to R](http://faculty.washington.edu/kenrice/rintro/) materials from SISG Module 3
 - Graphics with [ggplot2](https://ggplot2.tidyverse.org/)
 - Data manipulation with [dplyr](http://dplyr.tidyverse.org/)
