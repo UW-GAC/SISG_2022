@@ -65,6 +65,7 @@ NOTE: All times are Pacific Daylight Time (GMT-07:00)
 - [SeqArray](http://bioconductor.org/packages/release/bioc/html/SeqArray.html)
 - [SeqVarTools](http://bioconductor.org/packages/release/bioc/html/SeqVarTools.html)
 - [SNPRelate](http://bioconductor.org/packages/release/bioc/html/SNPRelate.html)
+- [Biobase](https://bioconductor.org/packages/release/bioc/html/Biobase.html)
 - [GGally](https://cran.r-project.org/web/packages/GGally)
 
 
