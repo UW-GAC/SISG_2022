@@ -15,7 +15,7 @@ Many of the lectures will be followed with hands-on exercises. Students will be 
 
 To run the exercises, log into [NHLBI BioData Catalyst powered by Seven Bridges](https://platform.sb.biodatacatalyst.nhlbi.nih.gov) with your username and password -- we will use this platform for all live demonstrations during the course.
 
-All of the R code and data can also be downloaded from the [github repository](https://github.com/UW-GAC/SISG_2022) from which the site is built and run on your local machine. Download the complete workshop data and exercises: https://github.com/UW-GAC/SISG_2022/archive/master.zip
+All of the R code and data can also be downloaded from the [github repository](https://github.com/UW-GAC/SISG_2022) from which the site is built and run on your local machine. Download the complete workshop data and exercises: [https://github.com/UW-GAC/SISG_2022/archive/master.zip](https://github.com/UW-GAC/SISG_2022/archive/master.zip)
 
 
 ## Schedule
