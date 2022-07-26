@@ -53,9 +53,9 @@ NOTE: All times are Pacific Daylight Time (GMT-07:00)
 | 9:20am-10:00am | Aggregate Association Tests with GENESIS | [Slides](https://drive.google.com/file/d/13o-7MrSFmWS4bie8hrBIXHKGiWZa3HFi/view?usp=sharing), [Recording]() | [.Rmd](https://github.com/UW-GAC/SISG_2022/blob/main/06_aggregate_tests.Rmd), [.html](https://htmlpreview.github.io/?https://github.com/UW-GAC/SISG_2022/blob/main/06_aggregate_tests.html), [Recording]() |
 | 10:00am-10:30am | _Break_ | | |
 | 10:30am-11:15am | Annotation Explorer Demo | [Slides](), [Recording]() | [.Rmd](https://github.com/UW-GAC/SISG_2022/blob/main/07_annotation_explorer.Rmd), [.html](https://htmlpreview.github.io/?https://github.com/UW-GAC/SISG_2022/blob/main/07_annotation_explorer.html), [Recording]() |
-| 11:15am-12:00pm | Advanced Annotation Strategies for Association Testing | [Slides](), [Recording]() |  |
+| 11:15am-12:00pm | Advanced Annotation Strategies for Association Testing | [Slides](https://drive.google.com/file/d/142SSmVz99uHVimXKsKoK1Nh2TFWKrt-u/view?usp=sharing), [Recording]() |  |
 | 12:00pm-1:00pm | _Lunch_ | | |
-| 1:00pm-2:00pm | Recent Findings from Sequencing Studies | [Slides](), [Recording]() |  |
+| 1:00pm-2:00pm | Recent Findings for WGS Studies | [Slides](https://drive.google.com/file/d/1tvJ317L_Dnx3VjN29RhCCgIyMXkkV4lL/view?usp=sharing), [Recording]() |  |
 | 2:00pm-2:30pm | Open Q&A | | [Recording]() |
 
 
