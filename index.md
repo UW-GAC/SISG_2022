@@ -39,10 +39,10 @@ NOTE: All times are Pacific Daylight Time (GMT-07:00)
 | 8:00am-8:50am | Association Tests Part II: Single Variant Tests | [Slides](https://drive.google.com/file/d/13zwtz8ZEK5LqglkbZjf4OSf2GPPCRmoG/view?usp=sharing), [Recording]() | |
 | 8:50am-9:45am | Single Variant Association Tests with GENESIS | [Slides](https://drive.google.com/file/d/1bF5fFQMrrWt1SdQyBdpgUW8Hnpbld451/view?usp=sharing), [Recording]() | [.Rmd](https://github.com/UW-GAC/SISG_2022/blob/main/02_single_variant_tests.Rmd), [.html](https://htmlpreview.github.io/?https://github.com/UW-GAC/SISG_2022/blob/main/02_single_variant_tests.html), [Recording]() |
 | 9:45am-10:15am | _Break_ | | |
-| 10:15am-11:45am | Population Structure and Relatedness\ Inference for Association Studies | [Slides](https://drive.google.com/file/d/1o8cueO0dwVn_PP3TQgceu0tabwjpqOfg/view?usp=sharing), [Recording]() | [.Rmd](https://github.com/UW-GAC/SISG_2022/blob/main/03_pop_structure_relatedness.Rmd), [.html](https://htmlpreview.github.io/?https://github.com/UW-GAC/SISG_2022/blob/main/03_pop_structure_relatedness.html), [Recording]() |
+| 10:15am-11:45am | Population Structure and Relatedness <br /> Inference for Association Studies | [Slides](https://drive.google.com/file/d/1o8cueO0dwVn_PP3TQgceu0tabwjpqOfg/view?usp=sharing), [Recording]() | [.Rmd](https://github.com/UW-GAC/SISG_2022/blob/main/03_pop_structure_relatedness.Rmd), [.html](https://htmlpreview.github.io/?https://github.com/UW-GAC/SISG_2022/blob/main/03_pop_structure_relatedness.html), [Recording]() |
 | 11:45am-12:45pm | _Lunch_ | | |
 | 12:45pm-2:00pm | Mixed Model Association Testing | [Slides](https://drive.google.com/file/d/15F4ZDUs575MqZ3VwBef4W_3lLcNhEmIo/view?usp=sharing), [Recording]() | [.Rmd](https://github.com/UW-GAC/SISG_2022/blob/main/04_mixed_models.Rmd), [.html](https://htmlpreview.github.io/?https://github.com/UW-GAC/SISG_2022/blob/main/04_mixed_models.html), [Recording]() |
-| 2:00pm-2:30pm | R shiny Apps for Exploring Results | [Recording]() | [.Rmd](https://github.com/UW-GAC/SISG_2022/blob/main/05_exploring_association_results.Rmd), [.html](https://htmlpreview.github.io/?https://github.com/UW-GAC/SISG_2022/blob/main/05_exploring_association_results.html), [Recording]() |
+| 2:00pm-2:30pm | R shiny Apps for Exploring Results Demo | | [.Rmd](https://github.com/UW-GAC/SISG_2022/blob/main/05_exploring_association_results.Rmd), [.html](https://htmlpreview.github.io/?https://github.com/UW-GAC/SISG_2022/blob/main/05_exploring_association_results.html), [Recording]() |
 
 **Friday, July 29th**
 
