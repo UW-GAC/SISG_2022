@@ -386,7 +386,7 @@ if (!file.exists(vcffile)) download.file(file.path(repo_path, vcffile), vcffile)
 gdsfile &lt;- &quot;data/1KG_phase3_subset_chr1.gds&quot;
 # convert the VCF to GDS
 seqVCF2GDS(vcffile, gdsfile, fmt.import=&quot;GT&quot;, storage.option=&quot;LZMA_RA&quot;)</code></pre>
-<pre><code>## Mon Jul 18 17:09:56 2022
+<pre><code>## Sat Jul 23 19:58:17 2022
 ## Variant Call Format (VCF) Import:
 ##     file(s):
 ##         1KG_phase3_subset_chr1.vcf.gz (120.7K)
@@ -413,7 +413,7 @@ seqVCF2GDS(vcffile, gdsfile, fmt.import=&quot;GT&quot;, storage.option=&quot;LZM
 ##     annotation/qual  [md5: d6b8ed9bd5cac7dd7898bb679675fc7c]
 ##     annotation/filter  [md5: 8294edaf60fffc1e9aa693b4bc423dd1]
 ## Done.
-## Mon Jul 18 17:09:57 2022
+## Sat Jul 23 19:58:18 2022
 ## Optimize the access efficiency ...
 ## Clean up the fragments of GDS file:
 ##     open the file &#39;data/1KG_phase3_subset_chr1.gds&#39; (71.3K)
@@ -421,7 +421,7 @@ seqVCF2GDS(vcffile, gdsfile, fmt.import=&quot;GT&quot;, storage.option=&quot;LZM
 ##     save to &#39;data/1KG_phase3_subset_chr1.gds.tmp&#39;
 ##     rename &#39;data/1KG_phase3_subset_chr1.gds.tmp&#39; (70.5K, reduced: 744B)
 ##     # of fragments: 61
-## Mon Jul 18 17:09:57 2022</code></pre>
+## Sat Jul 23 19:58:18 2022</code></pre>
 </div>
 <div id="exploring-a-gds-file" class="section level2">
 <h2>Exploring a GDS File</h2>
@@ -485,7 +485,7 @@ head(id)</code></pre>
 <pre><code>## [1] &quot;&quot;           &quot;rs17160776&quot; &quot;&quot;           &quot;&quot;           &quot;rs78293298&quot;
 ## [6] &quot;&quot;</code></pre>
 <p>There are additional useful functions for summary level data.</p>
-<pre class="r"><code># reference allele frequency of each variant
+<pre class="r"><code># minor allele frequency of each variant
 maf &lt;- seqAlleleFreq(gds, minor = TRUE)
 head(maf)</code></pre>
 <pre><code>## [1] 0.0039964476 0.0492895204 0.0004440497 0.0008880995 0.0071047957

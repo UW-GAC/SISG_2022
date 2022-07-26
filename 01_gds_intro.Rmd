@@ -56,7 +56,7 @@ head(id)
 There are additional useful functions for summary level data.
 
 ```{r minor_freq}
-# reference allele frequency of each variant
+# minor allele frequency of each variant
 maf <- seqAlleleFreq(gds, minor = TRUE)
 head(maf)
 summary(maf)
