@@ -1,4 +1,4 @@
-This site contains course materials for SISG Module 17: Computational Pipeline for WGS Data, July 27-29, 2022. **Course evaluations and certificates of completion will be available via the [official SISG course web page](https://si.biostat.washington.edu/courses/SM2217)** (requires login).
+This site contains course materials for SISG Module 17: Computational Pipeline for WGS Data, July 27-29, 2022. **Course evaluations and certificates of completion will be available via the [official SISG course web page](https://si.biostat.washington.edu/about/sisg/SM2217)** (requires login).
 
 - **Instructors:** Ken Rice, Laura Raffield, and Matthew Conomos
 - **TAs:** Deepti Jain and Anya Mikhaylova
@@ -26,8 +26,8 @@ NOTE: All times are Pacific Daylight Time (GMT-07:00)
 
 | Time | Topic | Lecture | Exercises/Discussion |
 | --- | --- | --- | --- |
-| 11:30am-11:40am | Introduction | [Slides](), [Recording]() | |
-| 11:40am-12:30pm | Using BioData Catalyst powered by Seven Bridges | [Slides](), [Recording]() | |
+| 11:30am-11:40am | Introduction | [Slides](https://docs.google.com/presentation/d/1QMS6cSLso9eMl96P7A7OHmkDpN3g1qFyupQE7cOA4Fk/edit?usp=sharing), [Recording]() | |
+| 11:40am-12:30pm | Using BioData Catalyst powered by Seven Bridges | [Slides](https://docs.google.com/presentation/d/1hyWz19Q2AlKX3dCZ1boOLf07-e0UTQPb2jSqXsctnvE/edit?usp=sharing), [Recording]() | |
 | 12:30pm-1:30pm | Intro to Genomic Data Structure Format | [Slides](https://drive.google.com/file/d/1SpB4X5dBxKlCsLfQqAB6lm0cnnNbiEPJ/view?usp=sharing), [Recording]() | [.Rmd](https://github.com/UW-GAC/SISG_2022/blob/main/01_gds_intro.Rmd), [.html](https://htmlpreview.github.io/?https://github.com/UW-GAC/SISG_2022/blob/main/01_gds_intro.html), [Recording]() |
 | 1:30pm-1:45pm | _Break_ | | |
 | 1:45pm-2:30pm | Association Tests Part I: Background | [Slides](https://drive.google.com/file/d/13zwtz8ZEK5LqglkbZjf4OSf2GPPCRmoG/view?usp=sharing), [Recording]() | |
@@ -49,7 +49,7 @@ NOTE: All times are Pacific Daylight Time (GMT-07:00)
 | Time | Topic | Lecture | Exercises/Discussion |
 | --- | --- | --- | --- |
 | 8:00am-9:00am | Association Tests Part III: Multiple Variant Tests | [Slides](https://drive.google.com/file/d/13zwtz8ZEK5LqglkbZjf4OSf2GPPCRmoG/view?usp=sharing), [Recording]() | |
-| 9:00am-9:20am | Variant Annotation for Aggregate Association Testing  | [Slides](), [Recording]() | |
+| 9:00am-9:20am | Variant Annotation for Aggregate Association Testing  | [Slides](https://drive.google.com/file/d/18cqwxTBxoBv2cNh6rdiRjl5nflmP5noA/view?usp=sharing), [Recording]() | |
 | 9:20am-10:00am | Aggregate Association Tests with GENESIS | [Slides](https://drive.google.com/file/d/13o-7MrSFmWS4bie8hrBIXHKGiWZa3HFi/view?usp=sharing), [Recording]() | [.Rmd](https://github.com/UW-GAC/SISG_2022/blob/main/06_aggregate_tests.Rmd), [.html](https://htmlpreview.github.io/?https://github.com/UW-GAC/SISG_2022/blob/main/06_aggregate_tests.html), [Recording]() |
 | 10:00am-10:30am | _Break_ | | |
 | 10:30am-11:15am | Annotation Explorer Demo | [Slides](), [Recording]() | [.Rmd](https://github.com/UW-GAC/SISG_2022/blob/main/07_annotation_explorer.Rmd), [.html](https://htmlpreview.github.io/?https://github.com/UW-GAC/SISG_2022/blob/main/07_annotation_explorer.html), [Recording]() |
@@ -73,7 +73,7 @@ NOTE: All times are Pacific Daylight Time (GMT-07:00)
 
 NHLBI BioData Catalyst Powered by Seven Bridges
 
-- [Getting Started Guide for SISG21 Module 16](https://drive.google.com/file/d/1LMlzot2GXPKCRmLH6BtsOi9PxKAoohYT/view?usp=sharing)
+- [Getting Started Guide for SISG22 Module 17](https://drive.google.com/file/d/1VjIFxEfF6tvlkIVCjFGeIiBRDmGNLbvn/view?usp=sharing)
 
 If you are new to R, you might find the following material helpful:
 
