@@ -10,9 +10,14 @@ To use the R packages developed at the University of Washington Genetic Analysis
 library(SeqArray)
 repo_path <- "https://github.com/UW-GAC/SISG_2022/raw/main"
 if (!dir.exists("data")) dir.create("data")
+
+# file path to the VCF file to *read* data from 
 vcffile <- "data/1KG_phase3_subset_chr1.vcf.gz"
 if (!file.exists(vcffile)) download.file(file.path(repo_path, vcffile), vcffile)
+
+# file path to *write* the output GDS file to 
 gdsfile <- "data/1KG_phase3_subset_chr1.gds"
+
 # convert the VCF to GDS
 seqVCF2GDS(vcffile, gdsfile, fmt.import="GT", storage.option="LZMA_RA")
 ```
