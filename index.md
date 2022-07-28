@@ -26,11 +26,11 @@ NOTE: All times are Pacific Daylight Time (GMT-07:00)
 
 | Time | Topic | Lecture | Exercises/Discussion |
 | --- | --- | --- | --- |
-| 11:30am-11:40am | Introduction | [Slides](https://docs.google.com/presentation/d/1QMS6cSLso9eMl96P7A7OHmkDpN3g1qFyupQE7cOA4Fk/edit?usp=sharing), [Recording]() | |
-| 11:40am-12:30pm | Using BioData Catalyst powered by Seven Bridges | [Slides](https://docs.google.com/presentation/d/1hyWz19Q2AlKX3dCZ1boOLf07-e0UTQPb2jSqXsctnvE/edit?usp=sharing), [Recording]() | |
-| 12:30pm-1:30pm | Intro to Genomic Data Structure Format | [Slides](https://drive.google.com/file/d/1SpB4X5dBxKlCsLfQqAB6lm0cnnNbiEPJ/view?usp=sharing), [Recording]() | [.Rmd](https://github.com/UW-GAC/SISG_2022/blob/main/01_gds_intro.Rmd), [.html](https://htmlpreview.github.io/?https://github.com/UW-GAC/SISG_2022/blob/main/01_gds_intro.html), [Recording]() |
+| 11:30am-11:40am | Introduction | [Slides](https://docs.google.com/presentation/d/1QMS6cSLso9eMl96P7A7OHmkDpN3g1qFyupQE7cOA4Fk/edit?usp=sharing), [Recording](https://washington.zoom.us/rec/share/c6C5waiqjiQpe1-tjdyeZS1i4tSxTEnFPuQchzJkDIf_jCuajultVCeZtQdUrtZ6.m9BQTA4kZJ4xru4I?startTime=1658946853000) | |
+| 11:40am-12:30pm | Using BioData Catalyst powered by Seven Bridges | [Slides](https://docs.google.com/presentation/d/1hyWz19Q2AlKX3dCZ1boOLf07-e0UTQPb2jSqXsctnvE/edit?usp=sharing), [Recording](https://washington.zoom.us/rec/play/Q-iGd9ML-omsBbr15IYRj1Uj2bFmYmF57Pqi-B0VG7nFisievtqnwtuljAnkdeCMUINqq8jJo-PnrDu4.WtU8h5mJCoXBtcO7?startTime=1658947757000&_x_zm_rtaid=HPyzAFjaQB2lkSPPv10ndQ.1658967472251.e1488b9b00b9fb91e68acc546cab2c7f&_x_zm_rhtaid=426) | |
+| 12:30pm-1:30pm | Intro to Genomic Data Structure Format | [Slides](https://drive.google.com/file/d/1SpB4X5dBxKlCsLfQqAB6lm0cnnNbiEPJ/view?usp=sharing), [Recording](https://washington.zoom.us/rec/play/TIXnTau5p56RdjD-Az9GyfW_D6xcCRDdfCVmoXKD4fJDMSmbP5wjIPVocvayE5bJoccAPL4wR-mrXzri._ePzSBMtRAVPGWBo?startTime=1658950005000&_x_zm_rtaid=HPyzAFjaQB2lkSPPv10ndQ.1658967472251.e1488b9b00b9fb91e68acc546cab2c7f&_x_zm_rhtaid=426) | [.Rmd](https://github.com/UW-GAC/SISG_2022/blob/main/01_gds_intro.Rmd), [.html](https://htmlpreview.github.io/?https://github.com/UW-GAC/SISG_2022/blob/main/01_gds_intro.html), [Recording](https://washington.zoom.us/rec/play/akAtKD_Gq7dgPWnnRToqtMAuCHU1WQGy11u_U8I9Yl1VHOkB1aUSNvWn2VfnMbzzevrmtFQbdDtlGIzi.Z-lZPd8yDzXVm_4M?startTime=1658953235000&_x_zm_rtaid=HPyzAFjaQB2lkSPPv10ndQ.1658967472251.e1488b9b00b9fb91e68acc546cab2c7f&_x_zm_rhtaid=426) |
 | 1:30pm-1:45pm | _Break_ | | |
-| 1:45pm-2:30pm | Association Tests Part I: Background | [Slides](https://drive.google.com/file/d/13zwtz8ZEK5LqglkbZjf4OSf2GPPCRmoG/view?usp=sharing), [Recording]() | |
+| 1:45pm-2:30pm | Association Tests Part I: Background | [Slides](https://drive.google.com/file/d/13zwtz8ZEK5LqglkbZjf4OSf2GPPCRmoG/view?usp=sharing), [Recording](https://washington.zoom.us/rec/play/cL2qlR4UUgl8DPdWldjXR8A0yvtfpaFeXA9pIjXTD2s8Y58iswU4BwWKcPA-CXmUZxi_b-2oGaTu9yD-.IS7BjaWAhBTq1UpL?startTime=1658954748000&_x_zm_rtaid=HPyzAFjaQB2lkSPPv10ndQ.1658967472251.e1488b9b00b9fb91e68acc546cab2c7f&_x_zm_rhtaid=426) | |
 
 **Thursday, July 28th**
 
