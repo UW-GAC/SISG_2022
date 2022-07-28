@@ -36,27 +36,27 @@ NOTE: All times are Pacific Daylight Time (GMT-07:00)
 
 | Time | Topic | Lecture | Exercises/Discussion |
 | --- | --- | --- | --- |
-| 8:00am-8:50am | Association Tests Part II: Single Variant Tests | [Slides](https://drive.google.com/file/d/13zwtz8ZEK5LqglkbZjf4OSf2GPPCRmoG/view?usp=sharing), [Recording]() | |
-| 8:50am-9:45am | Single Variant Association Tests with GENESIS | [Slides](https://drive.google.com/file/d/1bF5fFQMrrWt1SdQyBdpgUW8Hnpbld451/view?usp=sharing), [Recording]() | [.Rmd](https://github.com/UW-GAC/SISG_2022/blob/main/02_single_variant_tests.Rmd), [.html](https://htmlpreview.github.io/?https://github.com/UW-GAC/SISG_2022/blob/main/02_single_variant_tests.html), [Recording]() |
+| 8:00am-8:50am | Association Tests Part II: Single Variant Tests | [Slides](https://drive.google.com/file/d/13zwtz8ZEK5LqglkbZjf4OSf2GPPCRmoG/view?usp=sharing), Recording | |
+| 8:50am-9:45am | Single Variant Association Tests with GENESIS | [Slides](https://drive.google.com/file/d/1bF5fFQMrrWt1SdQyBdpgUW8Hnpbld451/view?usp=sharing), Recording | [.Rmd](https://github.com/UW-GAC/SISG_2022/blob/main/02_single_variant_tests.Rmd), [.html](https://htmlpreview.github.io/?https://github.com/UW-GAC/SISG_2022/blob/main/02_single_variant_tests.html), Recording |
 | 9:45am-10:15am | _Break_ | | |
-| 10:15am-11:45am | Population Structure and Relatedness <br /> Inference for Association Studies | [Slides](https://drive.google.com/file/d/1o8cueO0dwVn_PP3TQgceu0tabwjpqOfg/view?usp=sharing), [Recording]() | [.Rmd](https://github.com/UW-GAC/SISG_2022/blob/main/03_pop_structure_relatedness.Rmd), [.html](https://htmlpreview.github.io/?https://github.com/UW-GAC/SISG_2022/blob/main/03_pop_structure_relatedness.html), [Recording]() |
+| 10:15am-11:45am | Population Structure and Relatedness <br /> Inference for Association Studies | [Slides](https://drive.google.com/file/d/1o8cueO0dwVn_PP3TQgceu0tabwjpqOfg/view?usp=sharing), Recording | [.Rmd](https://github.com/UW-GAC/SISG_2022/blob/main/03_pop_structure_relatedness.Rmd), [.html](https://htmlpreview.github.io/?https://github.com/UW-GAC/SISG_2022/blob/main/03_pop_structure_relatedness.html), Recording |
 | 11:45am-12:45pm | _Lunch_ | | |
-| 12:45pm-2:00pm | Mixed Model Association Testing | [Slides](https://drive.google.com/file/d/15F4ZDUs575MqZ3VwBef4W_3lLcNhEmIo/view?usp=sharing), [Recording]() | [.Rmd](https://github.com/UW-GAC/SISG_2022/blob/main/04_mixed_models.Rmd), [.html](https://htmlpreview.github.io/?https://github.com/UW-GAC/SISG_2022/blob/main/04_mixed_models.html), [Recording]() |
-| 2:00pm-2:30pm | R shiny Apps for Exploring Results Demo | | [.Rmd](https://github.com/UW-GAC/SISG_2022/blob/main/05_exploring_association_results.Rmd), [.html](https://htmlpreview.github.io/?https://github.com/UW-GAC/SISG_2022/blob/main/05_exploring_association_results.html), [Recording]() |
+| 12:45pm-2:00pm | Mixed Model Association Testing | [Slides](https://drive.google.com/file/d/15F4ZDUs575MqZ3VwBef4W_3lLcNhEmIo/view?usp=sharing), Recording | [.Rmd](https://github.com/UW-GAC/SISG_2022/blob/main/04_mixed_models.Rmd), [.html](https://htmlpreview.github.io/?https://github.com/UW-GAC/SISG_2022/blob/main/04_mixed_models.html), Recording |
+| 2:00pm-2:30pm | R shiny Apps for Exploring Results Demo | | [.Rmd](https://github.com/UW-GAC/SISG_2022/blob/main/05_exploring_association_results.Rmd), [.html](https://htmlpreview.github.io/?https://github.com/UW-GAC/SISG_2022/blob/main/05_exploring_association_results.html), Recording |
 
 **Friday, July 29th**
 
 | Time | Topic | Lecture | Exercises/Discussion |
 | --- | --- | --- | --- |
-| 8:00am-9:00am | Association Tests Part III: Multiple Variant Tests | [Slides](https://drive.google.com/file/d/13zwtz8ZEK5LqglkbZjf4OSf2GPPCRmoG/view?usp=sharing), [Recording]() | |
-| 9:00am-9:20am | Variant Annotation for Aggregate Association Testing  | [Slides](https://drive.google.com/file/d/18cqwxTBxoBv2cNh6rdiRjl5nflmP5noA/view?usp=sharing), [Recording]() | |
-| 9:20am-10:00am | Aggregate Association Tests with GENESIS | [Slides](https://drive.google.com/file/d/13o-7MrSFmWS4bie8hrBIXHKGiWZa3HFi/view?usp=sharing), [Recording]() | [.Rmd](https://github.com/UW-GAC/SISG_2022/blob/main/06_aggregate_tests.Rmd), [.html](https://htmlpreview.github.io/?https://github.com/UW-GAC/SISG_2022/blob/main/06_aggregate_tests.html), [Recording]() |
+| 8:00am-9:00am | Association Tests Part III: Multiple Variant Tests | [Slides](https://drive.google.com/file/d/13zwtz8ZEK5LqglkbZjf4OSf2GPPCRmoG/view?usp=sharing), Recording | |
+| 9:00am-9:20am | Variant Annotation for Aggregate Association Testing  | [Slides](https://drive.google.com/file/d/18cqwxTBxoBv2cNh6rdiRjl5nflmP5noA/view?usp=sharing), Recording | |
+| 9:20am-10:00am | Aggregate Association Tests with GENESIS | [Slides](https://drive.google.com/file/d/13o-7MrSFmWS4bie8hrBIXHKGiWZa3HFi/view?usp=sharing), Recording | [.Rmd](https://github.com/UW-GAC/SISG_2022/blob/main/06_aggregate_tests.Rmd), [.html](https://htmlpreview.github.io/?https://github.com/UW-GAC/SISG_2022/blob/main/06_aggregate_tests.html), Recording |
 | 10:00am-10:30am | _Break_ | | |
-| 10:30am-11:15am | Annotation Explorer Demo | [Slides](), [Recording]() | [.Rmd](https://github.com/UW-GAC/SISG_2022/blob/main/07_annotation_explorer.Rmd), [.html](https://htmlpreview.github.io/?https://github.com/UW-GAC/SISG_2022/blob/main/07_annotation_explorer.html), [Recording]() |
-| 11:15am-12:00pm | Advanced Annotation Strategies for Association Testing | [Slides](https://drive.google.com/file/d/142SSmVz99uHVimXKsKoK1Nh2TFWKrt-u/view?usp=sharing), [Recording]() |  |
+| 10:30am-11:15am | Annotation Explorer Demo | [Slides](), Recording | [.Rmd](https://github.com/UW-GAC/SISG_2022/blob/main/07_annotation_explorer.Rmd), [.html](https://htmlpreview.github.io/?https://github.com/UW-GAC/SISG_2022/blob/main/07_annotation_explorer.html), Recording |
+| 11:15am-12:00pm | Advanced Annotation Strategies for Association Testing | [Slides](https://drive.google.com/file/d/142SSmVz99uHVimXKsKoK1Nh2TFWKrt-u/view?usp=sharing), Recording |  |
 | 12:00pm-1:00pm | _Lunch_ | | |
-| 1:00pm-2:00pm | Recent Findings for WGS Studies | [Slides](https://drive.google.com/file/d/1tvJ317L_Dnx3VjN29RhCCgIyMXkkV4lL/view?usp=sharing), [Recording]() |  |
-| 2:00pm-2:30pm | Open Q&A | | [Recording]() |
+| 1:00pm-2:00pm | Recent Findings for WGS Studies | [Slides](https://drive.google.com/file/d/1tvJ317L_Dnx3VjN29RhCCgIyMXkkV4lL/view?usp=sharing), Recording |  |
+| 2:00pm-2:30pm | Open Q&A | | Recording |
 
 
 ## R packages used
