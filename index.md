@@ -15,6 +15,8 @@ Many of the lectures will be followed with hands-on exercises. Students will be 
 
 To run the exercises, log into [NHLBI BioData Catalyst powered by Seven Bridges](https://platform.sb.biodatacatalyst.nhlbi.nih.gov) with your username and password -- we will use this platform for all live demonstrations during the course.
 
+- You will retain access to the Seven Bridges platform, including your SISG Project with all of the course materials even after the course ends. The SISG22 Workshop billing group will remain available to you for a short period of time, after which you will need to set up another payment method to run analyses. You can [request pilot cloud credits](https://biodatacatalyst.nhlbi.nih.gov/resources/cloud-credits) ($500 worth) from BioData Catalyst. Additionally, there is guidance available for [writing BioData Catalyst cloud costs into your grant proposal budget](https://bdcatalyst.gitbook.io/biodata-catalyst-documentation/written-documentation/getting-started/writing-biodata-catalyst-into-a-grant-proposal). 
+
 All of the R code and data can also be downloaded from the [github repository](https://github.com/UW-GAC/SISG_2022) from which the site is built and run on your local machine. Download the complete workshop data and exercises: [https://github.com/UW-GAC/SISG_2022/archive/master.zip](https://github.com/UW-GAC/SISG_2022/archive/master.zip)
 
 
@@ -48,11 +50,11 @@ NOTE: All times are Pacific Daylight Time (GMT-07:00)
 
 | Time | Topic | Lecture | Exercises/Discussion |
 | --- | --- | --- | --- |
-| 8:00am-9:00am | Association Tests Part III: Multiple Variant Tests | [Slides](https://drive.google.com/file/d/13zwtz8ZEK5LqglkbZjf4OSf2GPPCRmoG/view?usp=sharing), Recording | |
+| 8:00am-9:00am | Association Tests Part III: Multiple Variant Tests | [Slides](https://drive.google.com/file/d/13zwtz8ZEK5LqglkbZjf4OSf2GPPCRmoG/view?usp=sharing), [Recording](https://washington.zoom.us/rec/share/MFnywAIue1TU7WX6nV6hUp8N7_l68KQQHFtBGzCCFM441wwMIxm5p-YFpZgw-ZS7.VsFaeyWxCd_50TmC?startTime=1659075010000) | |
 | 9:00am-9:20am | Variant Annotation for Aggregate Association Testing  | [Slides](https://drive.google.com/file/d/18cqwxTBxoBv2cNh6rdiRjl5nflmP5noA/view?usp=sharing), Recording | |
-| 9:20am-10:00am | Aggregate Association Tests with GENESIS | [Slides](https://drive.google.com/file/d/13o-7MrSFmWS4bie8hrBIXHKGiWZa3HFi/view?usp=sharing), Recording | [.Rmd](https://github.com/UW-GAC/SISG_2022/blob/main/06_aggregate_tests.Rmd), [.html](https://htmlpreview.github.io/?https://github.com/UW-GAC/SISG_2022/blob/main/06_aggregate_tests.html), Recording |
+| 9:20am-10:00am | Aggregate Association Tests with GENESIS | [Slides](https://drive.google.com/file/d/13o-7MrSFmWS4bie8hrBIXHKGiWZa3HFi/view?usp=sharing) | [.Rmd](https://github.com/UW-GAC/SISG_2022/blob/main/06_aggregate_tests.Rmd), [.html](https://htmlpreview.github.io/?https://github.com/UW-GAC/SISG_2022/blob/main/06_aggregate_tests.html), Recording |
 | 10:00am-10:30am | _Break_ | | |
-| 10:30am-11:15am | Annotation Explorer Demo | [Slides](), Recording | [.Rmd](https://github.com/UW-GAC/SISG_2022/blob/main/07_annotation_explorer.Rmd), [.html](https://htmlpreview.github.io/?https://github.com/UW-GAC/SISG_2022/blob/main/07_annotation_explorer.html), Recording |
+| 10:30am-11:15am | Annotation Explorer Demo | Recording | [.Rmd](https://github.com/UW-GAC/SISG_2022/blob/main/07_annotation_explorer.Rmd), [.html](https://htmlpreview.github.io/?https://github.com/UW-GAC/SISG_2022/blob/main/07_annotation_explorer.html) |
 | 11:15am-12:00pm | Advanced Annotation Strategies for Association Testing | [Slides](https://drive.google.com/file/d/142SSmVz99uHVimXKsKoK1Nh2TFWKrt-u/view?usp=sharing), Recording |  |
 | 12:00pm-1:00pm | _Lunch_ | | |
 | 1:00pm-2:00pm | Recent Findings for WGS Studies | [Slides](https://drive.google.com/file/d/1tvJ317L_Dnx3VjN29RhCCgIyMXkkV4lL/view?usp=sharing), Recording |  |
