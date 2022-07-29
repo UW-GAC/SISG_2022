@@ -51,14 +51,13 @@ NOTE: All times are Pacific Daylight Time (GMT-07:00)
 | Time | Topic | Lecture | Exercises/Discussion |
 | --- | --- | --- | --- |
 | 8:00am-9:00am | Association Tests Part III: Multiple Variant Tests | [Slides](https://drive.google.com/file/d/13zwtz8ZEK5LqglkbZjf4OSf2GPPCRmoG/view?usp=sharing), [Recording](https://washington.zoom.us/rec/share/MFnywAIue1TU7WX6nV6hUp8N7_l68KQQHFtBGzCCFM441wwMIxm5p-YFpZgw-ZS7.VsFaeyWxCd_50TmC?startTime=1659075010000) | |
-| 9:00am-9:20am | Variant Annotation for Aggregate Association Testing  | [Slides](https://drive.google.com/file/d/18cqwxTBxoBv2cNh6rdiRjl5nflmP5noA/view?usp=sharing), Recording | |
-| 9:20am-10:00am | Aggregate Association Tests with GENESIS | [Slides](https://drive.google.com/file/d/13o-7MrSFmWS4bie8hrBIXHKGiWZa3HFi/view?usp=sharing) | [.Rmd](https://github.com/UW-GAC/SISG_2022/blob/main/06_aggregate_tests.Rmd), [.html](https://htmlpreview.github.io/?https://github.com/UW-GAC/SISG_2022/blob/main/06_aggregate_tests.html), Recording |
+| 9:00am-9:20am | Variant Annotation for Aggregate Association Testing  | [Slides](https://drive.google.com/file/d/18cqwxTBxoBv2cNh6rdiRjl5nflmP5noA/view?usp=sharing), [Recording](https://washington.zoom.us/rec/share/iuNJWKgmmq9soQW2EgTygwx9hEpM5YJ0af7y336eDB3i_3l3RSKD-cDPqLendvT3.Uab8UriKRZ8vMJCn?startTime=1659110634000) | |
+| 9:20am-10:00am | Aggregate Association Tests with GENESIS | [Slides](https://drive.google.com/file/d/13o-7MrSFmWS4bie8hrBIXHKGiWZa3HFi/view?usp=sharing) | [.Rmd](https://github.com/UW-GAC/SISG_2022/blob/main/06_aggregate_tests.Rmd), [.html](https://htmlpreview.github.io/?https://github.com/UW-GAC/SISG_2022/blob/main/06_aggregate_tests.html), [Recording](https://washington.zoom.us/rec/share/iuNJWKgmmq9soQW2EgTygwx9hEpM5YJ0af7y336eDB3i_3l3RSKD-cDPqLendvT3.Uab8UriKRZ8vMJCn?startTime=1659113532000) |
 | 10:00am-10:30am | _Break_ | | |
-| 10:30am-11:15am | Annotation Explorer Demo | Recording | [.Rmd](https://github.com/UW-GAC/SISG_2022/blob/main/07_annotation_explorer.Rmd), [.html](https://htmlpreview.github.io/?https://github.com/UW-GAC/SISG_2022/blob/main/07_annotation_explorer.html) |
-| 11:15am-12:00pm | Advanced Annotation Strategies for Association Testing | [Slides](https://drive.google.com/file/d/142SSmVz99uHVimXKsKoK1Nh2TFWKrt-u/view?usp=sharing), Recording |  |
+| 10:30am-11:15am | Annotation Explorer Demo | [Recording](https://washington.zoom.us/rec/share/iuNJWKgmmq9soQW2EgTygwx9hEpM5YJ0af7y336eDB3i_3l3RSKD-cDPqLendvT3.Uab8UriKRZ8vMJCn?startTime=1659115915000) | [.Rmd](https://github.com/UW-GAC/SISG_2022/blob/main/07_annotation_explorer.Rmd), [.html](https://htmlpreview.github.io/?https://github.com/UW-GAC/SISG_2022/blob/main/07_annotation_explorer.html) |
+| 11:15am-12:00pm | Advanced Annotation Strategies for Association Testing | [Slides](https://drive.google.com/file/d/142SSmVz99uHVimXKsKoK1Nh2TFWKrt-u/view?usp=sharing), [Recording](https://washington.zoom.us/rec/share/iuNJWKgmmq9soQW2EgTygwx9hEpM5YJ0af7y336eDB3i_3l3RSKD-cDPqLendvT3.Uab8UriKRZ8vMJCn?startTime=1659118196000) |  |
 | 12:00pm-1:00pm | _Lunch_ | | |
-| 1:00pm-2:00pm | Recent Findings for WGS Studies | [Slides](https://drive.google.com/file/d/1tvJ317L_Dnx3VjN29RhCCgIyMXkkV4lL/view?usp=sharing), Recording |  |
-| 2:00pm-2:30pm | Open Q&A | | Recording |
+| 1:00pm-2:00pm <br /> 2:00pm-2:30pm | Recent Findings for WGS Studies <br /> Open Q&A| [Slides](https://drive.google.com/file/d/1tvJ317L_Dnx3VjN29RhCCgIyMXkkV4lL/view?usp=sharing), [Recording](https://washington.zoom.us/rec/share/iuNJWKgmmq9soQW2EgTygwx9hEpM5YJ0af7y336eDB3i_3l3RSKD-cDPqLendvT3.Uab8UriKRZ8vMJCn?startTime=1659124914000) |  |
 
 
 ## R packages used
