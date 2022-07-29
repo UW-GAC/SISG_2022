@@ -44,7 +44,7 @@ NOTE: All times are Pacific Daylight Time (GMT-07:00)
 | 10:15am-11:45am | Population Structure and Relatedness <br /> Inference for Association Studies | [Slides](https://drive.google.com/file/d/1o8cueO0dwVn_PP3TQgceu0tabwjpqOfg/view?usp=sharing), [Recording](https://washington.zoom.us/rec/share/YHxFo4-xqKrRW6uX23HF4KqF2vULE_BHsplro6_xHeuWTJonH_DTQRJWvK11UIDI.O_SudZyVCAaup84v?startTime=1659028615000) | [.Rmd](https://github.com/UW-GAC/SISG_2022/blob/main/03_pop_structure_relatedness.Rmd), [.html](https://htmlpreview.github.io/?https://github.com/UW-GAC/SISG_2022/blob/main/03_pop_structure_relatedness.html), [Recording](https://washington.zoom.us/rec/share/YHxFo4-xqKrRW6uX23HF4KqF2vULE_BHsplro6_xHeuWTJonH_DTQRJWvK11UIDI.O_SudZyVCAaup84v?startTime=1659033001000) |
 | 11:45am-12:45pm | _Lunch_ | | |
 | 12:45pm-2:00pm | Mixed Model Association Testing | [Slides](https://drive.google.com/file/d/15F4ZDUs575MqZ3VwBef4W_3lLcNhEmIo/view?usp=sharing), [Recording](https://washington.zoom.us/rec/share/YHxFo4-xqKrRW6uX23HF4KqF2vULE_BHsplro6_xHeuWTJonH_DTQRJWvK11UIDI.O_SudZyVCAaup84v?startTime=1659037652000) | [.Rmd](https://github.com/UW-GAC/SISG_2022/blob/main/04_mixed_models.Rmd), [.html](https://htmlpreview.github.io/?https://github.com/UW-GAC/SISG_2022/blob/main/04_mixed_models.html), [Recording](https://washington.zoom.us/rec/share/YHxFo4-xqKrRW6uX23HF4KqF2vULE_BHsplro6_xHeuWTJonH_DTQRJWvK11UIDI.O_SudZyVCAaup84v?startTime=1659041805000) |
-| 2:00pm-2:30pm | R shiny Apps for Exploring Results Demo | | [.Rmd](https://github.com/UW-GAC/SISG_2022/blob/main/05_exploring_association_results.Rmd), [.html](https://htmlpreview.github.io/?https://github.com/UW-GAC/SISG_2022/blob/main/05_exploring_association_results.html), [Recording 1](https://washington.zoom.us/rec/share/YHxFo4-xqKrRW6uX23HF4KqF2vULE_BHsplro6_xHeuWTJonH_DTQRJWvK11UIDI.O_SudZyVCAaup84v?startTime=1659043029000), [Recording 2](https://washington.zoom.us/rec/share/GOq9yUco7E1-XS4xeAzvttBZK5w86JVFAU4lOGzgUmPH07X4OdqYYPGczDx_Cfpe.Y2P8gUjevt7Q3AGY?startTime=1659052683000) |
+| 2:00pm-2:30pm | R shiny Apps for Exploring Results Demo | [Recording 1](https://washington.zoom.us/rec/share/YHxFo4-xqKrRW6uX23HF4KqF2vULE_BHsplro6_xHeuWTJonH_DTQRJWvK11UIDI.O_SudZyVCAaup84v?startTime=1659043029000), [Recording 2](https://washington.zoom.us/rec/share/GOq9yUco7E1-XS4xeAzvttBZK5w86JVFAU4lOGzgUmPH07X4OdqYYPGczDx_Cfpe.Y2P8gUjevt7Q3AGY?startTime=1659052683000) | [.Rmd](https://github.com/UW-GAC/SISG_2022/blob/main/05_exploring_association_results.Rmd), [.html](https://htmlpreview.github.io/?https://github.com/UW-GAC/SISG_2022/blob/main/05_exploring_association_results.html) |
 
 **Friday, July 29th**
 
@@ -76,6 +76,8 @@ NOTE: All times are Pacific Daylight Time (GMT-07:00)
 NHLBI BioData Catalyst Powered by Seven Bridges
 
 - [Getting Started Guide for SISG22 Module 17](https://drive.google.com/file/d/1VjIFxEfF6tvlkIVCjFGeIiBRDmGNLbvn/view?usp=sharing)
+
+A detailed tutorial and relevant R scripts for STAAR pipeline are available at [https://github.com/xihaoli/STAARpipeline-Tutorial](https://github.com/xihaoli/STAARpipeline-Tutorial). STAAR pipeline apps will also be released soon on BioData Catalyst.
 
 If you are new to R, you might find the following material helpful:
 
